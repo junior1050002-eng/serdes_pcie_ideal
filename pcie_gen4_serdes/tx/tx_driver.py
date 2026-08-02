@@ -3,7 +3,7 @@ from scipy.signal import butter, lfilter
 from ..config import PCIeGen4Config
 
 class TXDriver:
-    def __init__(self, bandwidth_hz=16e9, rj_ps=0.5, sj_amp_ps=1.5, sj_freq_hz=100e6, dcd_percent=2.0, v_swing=PCIeGen4Config.V_SWING_P2P, enable_non_idealities=False):
+    def __init__(self, bandwidth_hz=12e9, rj_ps=0.8, sj_amp_ps=1.5, sj_freq_hz=100e6, dcd_percent=2.0, v_swing=PCIeGen4Config.V_SWING_P2P, enable_non_idealities=False):
         self.bandwidth_hz = bandwidth_hz
         self.rj_ps = rj_ps
         self.sj_amp_ps = sj_amp_ps
@@ -36,13 +36,15 @@ class TXDriver:
             mask = (time_vec >= t_start) & (time_vec < t_end)
             raw_waveform[mask] = scaled_symbols[i]
             
-        if self.bandwidth_hz is not None and self.bandwidth_hz > 0:
-            fs = PCIeGen4Config.FS
-            nyq = 0.5 * fs
-            normal_cutoff = self.bandwidth_hz / nyq
-            b, a = butter(1, normal_cutoff, btype='low', analog=False)
-            tx_waveform = lfilter(b, a, raw_waveform)
-        else:
-            tx_waveform = raw_waveform
+        bw = self.bandwidth_hz if self.enable_non_idealities else 16e9
+        fs = PCIeGen4Config.FS
+        nyq = 0.5 * fs
+        normal_cutoff = bw / nyq
+        b, a = butter(1, normal_cutoff, btype='low', analog=False)
+        tx_waveform = lfilter(b, a, raw_waveform)
+
+        if self.enable_non_idealities:
+            v_sat = 0.38
+            tx_waveform = v_sat * np.tanh(tx_waveform / v_sat)
 
         return time_vec, tx_waveform

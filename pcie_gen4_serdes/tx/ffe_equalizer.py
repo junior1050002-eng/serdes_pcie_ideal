@@ -2,7 +2,7 @@ import numpy as np
 from ..config import PCIeGen4Config
 
 class TXFFEEqualizer:
-    def __init__(self, preset_name="P7", dac_bits=None, enable_non_idealities=False):
+    def __init__(self, preset_name="P7", dac_bits=6, enable_non_idealities=False):
         self.preset_name = preset_name
         self.dac_bits = dac_bits
         self.enable_non_idealities = enable_non_idealities
