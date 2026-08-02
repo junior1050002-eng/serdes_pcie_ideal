@@ -1,0 +1,70 @@
+***** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******
+ Input File: c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_template
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   junio                HOSTNAME: LAPTOP-3R2P9I5V
+ lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00e04c6803f1 00ffdda35f06 ec3a56096030
+ lic: Using FLEXlm license file:
+ lic: 27000@localhost
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120
+ lic: 1(in_use)/999(total) FLOATING license(s) on SERVER localhost
+ lic:
+ init: begin read circuit files,  cpu clock=  2.15E-01
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\behave\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\AD\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\XILINX\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\TLINE\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\TI\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\SIGNET\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\PCI\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\LIN_TECH\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\FET\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\DIO\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\COMLINE\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\BURR_BRN\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\BJT\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\behave\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\AD\
+       option post     =     2.00
+       option runlvl
+       option post     =     2.00
+       option probe    =     1.00
+       option ingold   =     2.00
+ init: end read circuit files,  cpu clock=  2.69E-01 memory=   1199 kb
+ init: begin check errors,  cpu clock=  2.69E-01
+ init: end check errors,  cpu clock=  2.81E-01 memory=   1231 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  2.81E-01
+       establish matrix -- done,  cpu clock=  2.88E-01 memory=   1234 kb
+       re-order matrix -- done,  cpu clock=  2.90E-01 memory=   1235 kb
+ init: end setup matrix,  cpu clock=  2.96E-01 memory=   1247 kb
+ dcop: begin dcop,  cpu clock=  2.99E-01
+ dcop: end dcop,  cpu clock=  3.03E-01 memory=   1247 kb  tot_iter=       7
+ sweep: ac ac0    begin, #sweeps= 228 cpu clock=  3.06E-01
+ ac: frequency=    1.12E-01
+ ac: frequency=    1.26E+00
+ ac: frequency=    1.78E+01
+ ac: frequency=    2.51E+02
+ ac: frequency=    3.55E+03
+ ac: frequency=    4.47E+04
+ ac: frequency=    6.31E+05
+ ac: frequency=    8.91E+06
+ ac: frequency=    1.26E+08
+ ac: frequency=    1.78E+09
+ ac: frequency=    2.24E+10
+ sweep: ac ac0    end,  cpu clock=  3.33E-01 memory=   1249 kb
+ output: c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_template.tr0
+ sweep: tran tran0    begin, stop_t=  1.25E-07 #sweeps=**** cpu clock=  3.41E-01
+ tran: time= 1.2500E-08 tot_iter=    7968 conv_iter=    3932 cpu clock= 3.69E-01
+ tran: time= 2.5000E-08 tot_iter=   16145 conv_iter=    7957 cpu clock= 4.00E-01
+ tran: time= 3.7503E-08 tot_iter=   24236 conv_iter=   11941 cpu clock= 4.27E-01
+ tran: time= 5.0000E-08 tot_iter=   32289 conv_iter=   15903 cpu clock= 4.56E-01
+ tran: time= 6.2502E-08 tot_iter=   40363 conv_iter=   19872 cpu clock= 4.92E-01
+ tran: time= 7.9816E-08 tot_iter=   40381 conv_iter=   19881 cpu clock= 4.97E-01
+ tran: time= 9.2316E-08 tot_iter=   40385 conv_iter=   19883 cpu clock= 4.99E-01
+ tran: time= 1.0482E-07 tot_iter=   40389 conv_iter=   19885 cpu clock= 5.02E-01
+ tran: time= 1.1732E-07 tot_iter=   40393 conv_iter=   19887 cpu clock= 5.06E-01
+ tran: time= 1.2500E-07 tot_iter=   40397 conv_iter=   19889 cpu clock= 5.09E-01
+ sweep: tran tran0    end,  cpu clock=  5.11E-01 memory=   1313 kb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

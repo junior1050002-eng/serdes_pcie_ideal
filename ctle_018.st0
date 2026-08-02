@@ -1,0 +1,60 @@
+***** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******
+ Input File: c:\users\junio\vscode\pcie_serdes\ctle_018.sp
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   junio                HOSTNAME: LAPTOP-3R2P9I5V
+ lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00e04c6803f1 00ffdda35f06 ec3a56096030
+ lic: Using FLEXlm license file:
+ lic: 27000@localhost
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120
+ lic: 1(in_use)/999(total) FLOATING license(s) on SERVER localhost
+ lic:
+ init: begin read circuit files,  cpu clock=  6.50E-02
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\behave\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\AD\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\XILINX\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\TLINE\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\TI\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\SIGNET\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\PCI\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\LIN_TECH\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\FET\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\DIO\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\COMLINE\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\BURR_BRN\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\BJT\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\behave\
+       option search   = C:\synopsys\Hspice_E-2010.12\PARTS\AD\
+       option post     =     2.00
+       option runlvl
+       option post     =     2.00
+       option probe    =     1.00
+       option ingold   =     2.00
+       option list
+       option node
+ init: end read circuit files,  cpu clock=  1.11E-01 memory=    151 kb
+ init: begin check errors,  cpu clock=  1.11E-01
+ init: end check errors,  cpu clock=  1.18E-01 memory=    180 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.18E-01
+       establish matrix -- done,  cpu clock=  1.26E-01 memory=    185 kb
+       re-order matrix -- done,  cpu clock=  1.29E-01 memory=    187 kb
+ init: end setup matrix,  cpu clock=  1.29E-01 memory=    200 kb
+ dcop: begin dcop,  cpu clock=  1.35E-01
+ dcop: end dcop,  cpu clock=  1.37E-01 memory=    200 kb  tot_iter=       7
+ output: c:\users\junio\vscode\pcie_serdes\ctle_018.ma0
+ sweep: ac ac0    begin, #sweeps=  81 cpu clock=  1.43E-01
+ ac: frequency=    1.12E+06
+ ac: frequency=    2.51E+06
+ ac: frequency=    6.31E+06
+ ac: frequency=    1.58E+07
+ ac: frequency=    3.98E+07
+ ac: frequency=    1.00E+08
+ ac: frequency=    2.51E+08
+ ac: frequency=    6.31E+08
+ ac: frequency=    1.58E+09
+ ac: frequency=    3.98E+09
+ ac: frequency=    1.00E+10
+ sweep: ac ac0    end,  cpu clock=  1.77E-01 memory=    202 kb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

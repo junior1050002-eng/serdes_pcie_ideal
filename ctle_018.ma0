@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='E-2010.12 32-BIT'
+.TITLE '* ======================================================================'
+ dc_gain_db       nyq_gain_db      peak_boost_db    temper            
+ alter#            
+  0.000e+00        0.000e+00        0.000e+00        2.500e+01        
+ 1                 

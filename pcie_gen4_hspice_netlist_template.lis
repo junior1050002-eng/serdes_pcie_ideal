@@ -1,0 +1,275 @@
+ ****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+  Copyright (C) 2010 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_templat
+  Command line options: -i c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_template.sp -o c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_template.lis
+  lic:  
+  lic: FLEXlm: v10.8 
+  lic: USER:   junio                HOSTNAME: LAPTOP-3R2P9I5V 
+  lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00e04c6803f1 00ffdda35f06 ec3a56096030
+  
+  lic: Using FLEXlm license file: 
+  lic: 27000@localhost 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120 
+  lic: 1(in_use)/999(total) FLOATING license(s) on SERVER localhost 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_E-2010.12\meta.cfg
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_ctle.                         ctle_block         1.00 
+  **info** (c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_template.sp:15) DC voltage reset to initial transient source value              in source        0:vtx                 new dc=  0.0000D+00
+ ***************************************************************************
+ ***        model parameters  model name:   0:n_18.1   model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+       hspver=    2006.03               level=         49         
+      version=        3.2            paramchk=          0         
+       apwarn=          1                lite=          0         
+       vgslim=          0             binUnit=          1         
+       capMod=          2               xpart=          1         
+       mobMod=          1              nqsMod=          0         
+       stiMod=          0                 elm=          5         
+     sfvtflag=          0                 tox=   4.2e-009 meter   
+           xj=   1.6e-007 meter       binflag=          0         
+         lmin=   1.8e-007 meter          lmax=     5e-005 meter   
+         wmin=   2.5e-007 meter          wmax=     0.0001 meter   
+         lref=          0 meter          wref=          0 meter   
+         lint= 1.587e-008 meter          wint= 1.022e-008 meter   
+        lmult=          1               wmult=          1         
+           ll=-1.062e-015                 lln=          1         
+           lw= 2.996e-015                 lwn=          1         
+          lwl=          0                  wl=          0         
+          wln=          1                  ww= 7.262e-016         
+          wwn=          1                 wwl=          0         
+          dwg=-3.396e-009 m/V             dwb= 1.346e-009 m/V^1/2 
+           xl= -1.05e-008                  xw=          0         
+           a0=       1.93                 ags=     0.5072 V^-1    
+           b0= 1.486e-006 meter            b1= 9.064e-006 meter   
+         keta=    0.01752 V^-1           voff=    -0.1088 V       
+        ngate=     1e+023 cm^-3           vbx=          0 V       
+          vbm=         -3 V                xt=  1.55e-007 meter   
+         vth0=     0.3075 V               nch=3.7446e+017 cm^-3   
+         nsub=     6e+016 cm^-3           nlx= 4.279e-007 meter   
+       gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+           k1=     0.4578 V^1/2            k2=   -0.02638         
+           k3=     -10.88                 k3b=     0.2379 V^-1    
+           w0=-8.813e-008 meter          dvt0=     0.4042         
+         dvt1=     0.3237                dvt2=    -0.8602 V^-1    
+        dvt0w=      0.383 meter^-1      dvt1w=     600000 meter^-1
+        dvt2w=     -0.025 V^-1           dsub=   0.001592         
+         eta0=   0.001004                etab=  -0.001459 V^-1    
+           u0=      324.1 cm^2/V/sec         ua=-9.201e-010 m/V     
+           ub= 1.907e-018 (m/V)^2          uc= 4.355e-011 V^-1    
+         vsat=      72580 m/sec            a1=          0 v^-1    
+           a2=          1               delta=       0.01 V       
+         rdsw=      4.905 ohm-um         prwg=          0 V^-1    
+         prwb=          0 V^-1/2           wr=          1         
+         pclm=      1.091             pdiblc1=   0.003061         
+      pdiblc2=     1e-006             pdiblcb=          0 V^-1    
+       pscbe1= 4.866e+008 V/m          pscbe2=   2.8e-007 V/m     
+        drout=   0.001592                pvag=    -0.2958         
+      nfactor=      1.038                cdsc=   0.002275 f/m^2   
+        cdscb=  0.0008241 f/V/m^2       cdscd=    -0.0005 f/V/m^2 
+          cit=  -0.001511 f/m^2        alpha0=          0 m/V     
+        beta0=         30 V               dlc=     4e-008 meter   
+          dwc=          0 meter           clc=     1e-007 meter   
+          cle=        0.6                cgso=  2.35e-010 f/m     
+         cgdo=  2.35e-010 f/m            cgbo=          0 f/m     
+         cgsl=          0 f/m            cgdl=          0 f/m     
+       ckappa=        0.6                  cf= 1.533e-010 f/m     
+         acde=          1 m/V            moin=         15 V^1/2   
+         toxm=   4.2e-009 m            dtoxcv=          0 m       
+          vfb (not used)                alpha1=          0 1/V     
+         ijth=          0 A              noff=          1         
+       voffcv=          0                 tcj=          0 1/K     
+        tcjsw=          0 1/K          tcjswg=          0 1/K     
+          tpb=          0 V/K           tpbsw=          0 V/K     
+       tpbswg=          0 V/K             llc= -6.64e-015         
+          lwc=          0                lwlc=          0         
+          wlc=          0                 wwc=          0         
+         wwlc=          0                tnom=     298.15 K       
+          kt1=    -0.2255 V              kt1l=-4.275e-009         
+          kt2=   -0.02527                 ute=     -1.186         
+          ua1= 2.253e-009 m/V             ub1=-2.673e-018 (m/V)^2 
+          uc1=-3.832e-011 m/V^2            at=      14490 m/s     
+          prt=     -10.18         
+          using Berkeley noise model       noiMod=          1         
+         noia=     1e+020                noib=      50000         
+         noic=  -1.4e-012                  em=   4.2e+007         
+           ef=          1                  af=          1         
+           kf=          0              gdsnoi=-1.23457e-029         
+          using Hspice diodes            using ACM 
+          acm=         3                 hdif=  2.6e-007 meter    
+         ldif=    8e-008 meter             js=    1e-006 amp/m^2  
+          jsw=    7e-011 amp/m            xti=         3          
+            n=         1                   cj=   0.00103 f/m^2    
+           mj=     0.443                   pb=     0.823 V        
+         cjsw= 1.34e-010 f/m             mjsw=      0.33          
+          php=      0.88 V               pbsw (not used)           
+       cjgate=    5e-010 f/m            cjswg (not used)           
+        mjswg (not used)                 pbswg (not used)           
+          la0=    -0.4667                lags=     0.3028         
+        lketa=   -0.01942               lvoff=  -0.004208         
+        lvth0=     -0.001                lnlx=-2.854e-008         
+        leta0=   0.001574            lpdiblc2=  -0.004752         
+          wa0=   -0.04731                wags=   0.004242         
+        wvoff= -0.0004078               wvth0=    0.06027         
+          wu0=       0.54                 wua= -1.88e-011         
+        wvsat=       5066                wute=    0.06373         
+          wat=       7067                 pa0=   -0.02649         
+        pvoff= -0.0003788                 pw0=   1.3e-009         
+          pub=   3.8e-020         
+ 
+
+ 
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+  Opening plot unit= 79
+ file=c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_template.pa0  
+
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is   0.000e+00
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:in_n    = 5.000e-01 0:in_p    = 5.000e-01 0:out_ctle= 3.758e-01
+ +0:out_ctle= 6.242e-01 0:v_bias  = 5.000e-01 0:vdd     = 1.000e+00
+ +0:vss     = 0.000e+00 1:node_a  =-2.268e-01 1:node_b  =-1.517e-01
+
+
+ ****  voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vss      0:v_bias   0:vtx     
+  volts    1.000e+00  0.000e+00  5.000e-01  0.000e+00
+  current -1.000e-03  1.000e-03  0.000e+00  0.000e+00
+  power    1.000e-03  0.000e+00  0.000e+00  0.000e+00
+
+     total voltage source power dissipation=  1.000e-03       watts
+
+
+
+ ***** current sources
+
+ subckt   x_ctle    
+ element  1:iss     
+  volts   -2.268e-01
+  current  1.000e-03
+  power    2.268e-04
+
+
+     total current source power dissipation= 2.268e-04       watts
+
+ **** resistors
+
+ subckt                         x_ctle     x_ctle     x_ctle    
+ element  0:r_term_p 0:r_term_n 1:rs       1:rl1      1:rl2     
+  r value  5.000e+01  5.000e+01  2.000e+02  1.000e+03  1.000e+03
+  v drop   0.000e+00  0.000e+00 -7.515e-02  3.758e-01  6.242e-01
+  current  0.000e+00  0.000e+00 -3.758e-04  3.758e-04  6.242e-04
+  power    0.000e+00  0.000e+00  2.824e-05  1.412e-04  3.897e-04
+
+
+
+ **** mosfets
+
+
+ subckt   x_ctle     x_ctle    
+ element  1:m1       1:m2      
+ model    0:n_18.1   0:n_18.1  
+ region     Saturati   Saturati
+  id       6.242e-04  3.758e-04
+  ibs      5.284e-12  2.834e-13
+  ibd     -2.922e-16 -4.856e-16
+  vgs      7.268e-01  6.517e-01
+  vds      6.026e-01  7.759e-01
+  vbs      2.268e-01  1.517e-01
+  vth      4.740e-01  4.763e-01
+  vdsat    2.152e-01  1.783e-01
+  vod      2.528e-01  1.753e-01
+  beta     1.981e-02  1.989e-02
+  gam eff  5.018e-01  5.035e-01
+  gm       3.592e-03  3.040e-03
+  gds      2.104e-04  1.322e-04
+  gmb      3.491e-04  3.387e-04
+  cdtot    1.420e-14  1.349e-14
+  cgtot    1.870e-14  1.866e-14
+  cstot    2.735e-14  2.705e-14
+  cbtot    2.538e-14  2.454e-14
+  cgs      1.395e-14  1.379e-14
+  cgd      3.631e-15  3.619e-15
+
+
+
+ **warning** no probe statements specified, thus .ac# omitted
+  **warning** PSF format is not supported on this platform.
+
+          ***** job concluded
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count                  :     1
+  Available CPU Count                         :    16
+  Actual Model Evaluation(Load) Threads Count :     1
+  Actual Solver Threads Count                 :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      14 # elements   =      15
+  # resistors   =       5 # capacitors =       3 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       1 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       2 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1           7
+  ac analysis        0.03         228         228
+  transient          0.17      125001       40399       19890 rev=        25
+  readin             0.21
+  errchk             0.01
+  setup              0.01
+  output             0.00
+
+
+           total memory used         1313  kbytes
+           total cpu time            0.46 seconds
+           total elapsed time        0.52 seconds
+           job started at     16:48:25 08/02/2026
+           job ended   at     16:48:26 08/02/2026
+
+
+  lic: Release hspice token(s) 

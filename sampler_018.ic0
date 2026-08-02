@@ -1,0 +1,23 @@
+* "simulator" "HSPICE" 
+* "version" "E-2010.12 32-BIT"
+* "format" "HSP"
+* "rundate" "16:12:35 08/02/2026 "
+* "netlist" "c:\users\junio\vscode\pcie_serdes\sampler_018.sp "
+* "runtitle" "* ===================================================================="
+* time =  0.000e+00       
+* temperature =  2.500e+01       
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000e-12       
+.nodeset
++ clk = 0.000e+00       
++ in_n = 8.800e-01       
++ in_p = 9.200e-01       
++ node_l = 1.800e+00       
++ node_r = 1.800e+00       
++ node_tail = 8.101e-01       
++ out_n = 1.800e+00       
++ out_p = 1.800e+00       
++ vdd = 1.800e+00       
++ vss = 0.000e+00       
+***   END: Saved Operating Point ***                     

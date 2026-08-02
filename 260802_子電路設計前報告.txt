@@ -1,0 +1,148 @@
+在進入 HSPICE 晶片電路設計之前，以下為您整理這幾天我們共同完成的 **PCIe Gen 4 (16 Gbps) SerDes 實體層（PHY）系統模擬平台完整總結報告**。
+
+本報告詳細列出了系統規格、模組架構、演算法機制、驗證結果以及提煉給 HSPICE 的硬體規格清單：
+
+---
+
+# 📊 PCIe Gen 4 (16 Gbps) SerDes 系統平台開發與驗證報告
+
+## 壹、 專案目標與規格標準 (Project Specifications)
+
+* **設計介面標準**：PCI-SIG PCI Express Base Specification Rev 4.0 (PCIe Gen 4)
+* **資料傳輸速率 (Data Rate)**：$16\text{ Gbps}$（NRZ 訊號調變，單位時間週期 $UI = 62.5\text{ ps}$）
+* **通道高頻衰減標竿**：Nyquist 頻率 $8\text{ GHz}$ 下衰減 $-28\text{ dB}$ (Lossy PCB Trace)
+* **目標誤碼率 (Target BER)**：$\text{BER} \le 10^{-12}$
+* **程式開發架構**：Python 3 物件導向（OOP）模組化套件（`pcie_gen4_serdes/`）
+
+---
+
+## 貳、 系統架構與演算法詳細清單 (Architecture & Algorithms)
+
+### 1. 發送端 TX Subsystem (`pcie_gen4_serdes/tx/`)
+
+* **PRBS Pattern Generator (`PRBSGenerator`)**：
+* **演算法**：採用 LFSR 反饋多項式（$X^7 + X^6 + 1$），可切換 PRBS7 / PRBS15 / PRBS31。
+
+
+* **Serializer (`Serializer`)**：
+* **架構**：32:1 並轉串多工數樹狀架構（PISO MUX Tree）。
+
+
+* **3-Tap FFE Equalizer (`TXFFEEqualizer`)**：
+* **演算法**：離散 FIR 卷積 $y[n] = c_{-1}x[n+1] + c_0x[n] + c_1x[n-1]$。
+* **功能**：完整收錄 PCI-SIG 官方 P0~P10 11 組 Presets（如 P7: $-6.0\text{ dB}$ De-emphasis, $+3.5\text{ dB}$ Pre-shoot），並支援 6-bit DAC 量化。
+
+
+* **CML Driver (`TXDriver`)**：
+* **演算法**：連續時間過採樣（$OSR=64$, $FS=1.024\text{ THz}$），輸出擺幅 $800\text{ mV}_{ppd}$，帶有一階低通濾波（$12 \sim 16\text{ GHz}$ Bandwidth）與輸出 Gain Saturation ($\tanh$)。
+* **非理想抖動注入**：隨機抖動（$\text{RJ}=0.8\text{ ps RMS}$）、正弦抖動（$\text{SJ}=1.5\text{ ps}$ @ $100\text{ MHz}$）與占空比失真（$\text{DCD}=2\%$ UI）。
+
+
+
+### 2. 通道衰減模型 Channel (`pcie_gen4_serdes/channel/`)
+
+* **`PCIeGen4Channel`**：
+* **演算法**：二階衰減濾波器，精準模擬高頻皮集效應與介電損耗（Nyquist $8\text{ GHz}$ 下 $-28\text{ dB}$ 衰減），並支援加性高斯白雜訊與串擾（AWGN / Crosstalk, $\text{SNR} = 25\text{ dB}$）。
+
+
+
+### 3. 接收端 RX Subsystem (`pcie_gen4_serdes/rx/`)
+
+* **CTLE (`ContinuousTimeLinearEqualizer`)**：
+* **演算法**：連續時間 S 域轉移函數 $H(s) = A_{DC} \frac{1 + s/\omega_z}{(1 + s/\omega_{p1})(1 + s/\omega_{p2})}$ 透過雙線性變換（Bilinear Transform, $s \to z$）實現，在 $8\text{ GHz}$ 提供 $+12\text{ dB}$ Peaking Boost。
+
+
+* **VGA (`VariableGainAmplifier`)**：
+* **功能**：自動調幅，鎖定波形峰值於 $0.4\text{ V}$（$800\text{ mV}_{ppd}$）。
+
+
+* **High-Speed Sampler (`HighSpeedSampler`)**：
+* **架構**：StrongArm Latch 模型，支援晶體管直流失調（$\text{DC Offset} = +8\text{ mV}$）與感測死區靈敏度（$\pm 3\text{ mV}$）。
+
+
+* **Adaptive DFE (`AdaptiveDFE`)**：
+* **演算法**：2-Tap LMS 自適應演算法 $y[n] = x[n] - h_1\hat{d}[n-1] - h_2\hat{d}[n-2]$，以 $\mu=0.005$ 自動動態更新 $h_1, h_2$ 抽頭權重以消除殘餘 Post-cursor ISI。
+
+
+* **Digital CDR (`DigitalCDR`)**：
+* **演算法**：Bang-Bang CDR 雙環路濾波器（Proportional-Integral），控制 6-bit Phase Interpolator（相位步階 $5.625^\circ$）。
+
+
+
+---
+
+## 參、 已完成的測試與驗證結果清單 (Verified Results)
+
+| 測試腳本檔名 | 測試與驗證項目 | 產出圖檔名稱 | 關鍵驗證數據與結果 |
+| --- | --- | --- | --- |
+| **`run_tx_verification.py`** | 1. Ideal TX Flat (P4)<br>
+
+<br>2. Ideal TX Equalized (P7)<br>
+
+<br>3. Non-Ideal TX (Jitter) | `tx_eye_ideal_p4.png`<br>
+
+<br>`tx_eye_ideal_p7.png`<br>
+
+<br>`tx_eye_nonideal_p7.png` | 驗證 $800\text{ mV}_{ppd}$ 擺幅、3-Tap FFE 多層軌跡波形，以及 RJ/SJ/DCD 抖動觸發的厚邊緣。 |
+| **`run_full_link_verification.py`** | 1. Channel Loss (-28dB)<br>
+
+<br>2. RX Equalization (CTLE+DFE) | `link_1_channel_output_closed_eye.png`<br>
+
+<br>`link_2_rx_ctle_restored_open_eye.png` | 通道輸出眼圖**完全閉合**；經 CTLE ($+12\text{ dB}$)與 DFE 等化後**眼圖完美張開**，達 **$\text{BER}=0.000000$ 零誤碼**。 |
+| **`run_advanced_performance_analysis.py`** | 1. 浴缸曲線 (Bathtub)<br>
+
+<br>2. 抖動容忍度 (JTOL)<br>
+
+<br>3. 通道衰減掃描 (Sweep) | `perf_1_bathtub_curve.png`<br>
+
+<br>`perf_2_jtol_curve.png`<br>
+
+<br>`perf_3_channel_loss_sweep.png` | 1. 驗證 $\text{BER} \le 10^{-12}$ 下的採樣時間裕度。<br>
+
+<br>2. 實測 JTOL 曲線**全程高於 PCIe 官方 Mask**。<br>
+
+<br>3. 通道 $-10 \sim -36\text{ dB}$ 掃描下展現超高 Margin。 |
+| **`run_compliance_regulatory_tests.py`** | 1. PCI-SIG Presets (P0~P10)<br>
+
+<br>2. FCC/CE EMI (SSC 展頻)<br>
+
+<br>3. ESD & S11 Return Loss<br>
+
+<br>4. PVT HTOL 溫壓 Corner | `compliance_1_tx_preset_matrix.png`<br>
+
+<br>`compliance_2_ssc_emi_spectrum.png`<br>
+
+<br>`compliance_3_s11_return_loss.png`<br>
+
+<br>`compliance_4_pvt_temperature_corners.png` | 1. P0~P10 增益精度符合官方規格。<br>
+
+<br>2. $-0.5\%$ SSC 展頻降低主頻 Peak 能量 $3.1\text{ dB}$。<br>
+
+<br>3. 帶入 $200\text{ fF}$ ESD 二極體後 $S_{11} = -10.67\text{ dB} \le -10\text{ dB}$。<br>
+
+<br>4. 在 TT(25°C)、SS(125°C/HTOL)、FF(-40°C) 下眼高均 $> 440\text{ mV}$ 並達零誤碼。 |
+
+---
+
+## 肆、 HSPICE 晶片電路設計對接工具 (HSPICE Interface)
+
+* **`export_hspice_pwl.py`**：將 Python 產生的真實 PCIe Gen 4 P7 帶抖動波形導出為 **`tx_output_p7.pwl`** 數據點檔。
+* **`pcie_gen4_hspice_netlist_template.sp`**：建立了包含 PDK 載入、PWL 激勵源、帶有 $200\text{ fF}$ $C_{ESD}$ 的 CTLE 差動放大電路拓撲（源極退化 $R_s, C_s$）與 `.ac` / `.eye_diagram` 模擬指令的 HSPICE 測試檔範本。
+
+---
+
+## 伍、 提煉給 HSPICE 電路設計的規格匯總表 (Circuit Spec Sheet)
+
+在進入 HSPICE 設計前，Python 平台幫我們產出的電路設計目標如下：
+
+| 晶片子電路模組 | HSPICE 晶體管級設計目標與規格 (Circuit Specs) |
+| --- | --- |
+| **TX CML Driver** | 差動擺幅 $800\text{ mV}_{ppd}$，輸出端子 $50\Omega$ 阻抗匹配，驅動頻寬 $> 12\text{ GHz}$，相容 PCI-SIG P0~P10 Presets 電流比。 |
+| **RX CTLE** | 採用源極退化（Source Degenerated）差動對，在 $8\text{ GHz}$ 奈奎斯特點提供最小 **$+12\text{ dB}$ Peaking Boost**（低頻 DC Gain約 $-3\text{ dB}$）。 |
+| **RX VGA** | 提供可變增益放大，動態將 AFE 輸出電壓峰值穩定在 $0.4\text{ V}$。 |
+| **RX Sampler (StrongArm)** | 採用動態再生比較器，採樣速度跟上 $16\text{ Gbps}$（$62.5\text{ ps}$ 內完成判決），感測靈敏度 $< 3\text{ mV}$，可容忍直流失調電壓 $V_{offset} \le 8\text{ mV}$。 |
+| **RX DFE** | 2-Tap LMS 自適應回饋電路，抽頭權重調整範圍控制在 $\vert{}h_i\vert{} \le 0.15\text{ V}$ 以內。 |
+
+---
+
+這份報告清楚記載了我們至今為止完成的所有架構、演算法與驗證數據。有了這些明確的規格，您就可以非常自信地開啟 HSPICE 進行單一子電路的晶體管級設計了！
