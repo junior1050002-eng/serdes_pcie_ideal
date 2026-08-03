@@ -19,10 +19,6 @@
   lic: 1(in_use)/999(total) FLOATING license(s) on SERVER localhost 
   lic:   
  Init: read install configuration file: C:\synopsys\Hspice_E-2010.12\meta.cfg
- (c:\users\junio\vscode\pcie_serdes\cml_driver_018.sp:39)
- **warning** unknown command ".eye_diagram" is ignored
- (c:\users\junio\vscode\pcie_serdes\cml_driver_018.sp:40)
- **warning**  unknown command name is ignored
  scientific notation:
  a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
  m=10**-3   k=10**3    x=10**6    g=10**9 
@@ -138,6 +134,9 @@
      0:drend_rnhr1000                                          = 0.000e+00      
      0:drs_rnhr1000                                            = 0.000e+00      
      0:ddw_rnhr1000                                            = 0.000e+00      
+     0:vod_max                                                 =-1.235e-29      
+     0:vod_min                                                 =-1.235e-29      
+     0:vod_p2p                                                 =-1.235e-29      
 
 
 
@@ -251,156 +250,10 @@
           wat=       7067                 pa0=   -0.02649         
         pvoff= -0.0003788                 pw0=   1.3e-009         
           pub=   3.8e-020         
- 
-
-1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
- ******  
- * =======================================================================
-
-  ******  circuit element summary tnom=  25.000 temp=  25.000 *****
-
-
- **** resistors
-
-  
- 
-                                        
- element name        0:r1       0:r2    
- node1               0:vdd      0:vdd   
- node2               0:out_p    0:out_n 
- model                                  
- res eff           5.000e+01  5.000e+01 
- tc1                 0.         0.      
- tc2                 0.         0.      
- scale             1.000e+00  1.000e+00 
- m                 1.000e+00  1.000e+00 
- ac                5.000e+01  5.000e+01 
- temp              2.500e+01  2.500e+01 
- l                   0.         0.      
- w                   0.         0.      
- cap                 0.         0.      
- noise            1.000e+00  1.000e+00  
-
-
- **** capacitors
-  
- 
-                                        
- element name        0:cpad1    0:cpad2 
- node1               0:out_p    0:out_n 
- node2               0:0        0:0     
- model                                  
- cap eff           1.000e-13  1.000e-13 
- tc1               0.000e+00  0.000e+00 
- tc2               0.000e+00  0.000e+00 
- scale             1.000e+00  1.000e+00 
- ic               -1.235e-29 -1.235e-29 
- m                 1.000e+00  1.000e+00 
- w                 0.000e+00  0.000e+00 
- l                 0.000e+00  0.000e+00 
- temp              2.500e+01  2.500e+01 
-
-
- **** independent sources
-
-     name         node1        node2      dc volt    ac mag    ac phase    type
-  vdd  vdd               0                  1.800e+00  0.000e+00  0.000e+00 dc   
-  vss  vss               0                  0.000e+00  0.000e+00  0.000e+00 dc   
-  vcm  in_cm             0                  9.000e-01  0.000e+00  0.000e+00 dc   
-  vin_p  in_p              in_cm             -4.000e-01  0.000e+00  0.000e+00 pulse
-             initial value  -4.000e-01
-             pulsed value.   4.000e-01
-             delay time...   0.000e+00
-             risetime.....   5.000e-11
-             falltime.....   5.000e-11
-             width........   3.500e-10
-             period.......   8.000e-10
-
-  vin_n  in_n              in_cm              4.000e-01  0.000e+00  0.000e+00 pulse
-             initial value   4.000e-01
-             pulsed value.  -4.000e-01
-             delay time...   0.000e+00
-             risetime.....   5.000e-11
-             falltime.....   5.000e-11
-             width........   3.500e-10
-             period.......   8.000e-10
-
-  vbias  v_bias            0                  6.500e-01  0.000e+00  0.000e+00 dc   
-
-
- **** mosfets
-
-
- **** BSIM3v3 Model (Level49 or Level53)
-  
- 
-                                                            
- element name        0:m1          0:m2          0:m3       
- drain               0:out_n       0:out_p       0:node_tai 
- gate                0:in_p        0:in_n        0:v_bias   
- source              0:node_tai    0:node_tai    0:vss      
- bulk                0:vss         0:vss         0:vss      
- model               0:n_18.1      0:n_18.1      0:n_18.1   
- w eff             1.998e-05     1.998e-05     7.998e-05    
- l eff             1.500e-07     1.500e-07     3.238e-07    
- rd eff            1.040e-01     1.040e-01     2.600e-02    
- rs eff            1.040e-01     1.040e-01     2.600e-02    
- cdsat             1.483e-15     1.483e-15     5.714e-15    
- cssat             1.483e-15     1.483e-15     5.714e-15    
- capbd             2.353e-14     2.353e-14     9.371e-14    
- capbs             2.353e-14     2.353e-14     9.371e-14    
- temp              2.500e+01     2.500e+01     2.500e+01    
- aic                                                        
- nf                1.000e+00     1.000e+00     1.000e+00    
- sa                0.000e+00     0.000e+00     0.000e+00    
- sb                0.000e+00     0.000e+00     0.000e+00    
- sd                0.000e+00     0.000e+00     0.000e+00    
- saeff             0.000e+00     0.000e+00     0.000e+00    
- sbeff             0.000e+00     0.000e+00     0.000e+00    
- mulu0             1.000e+00     1.000e+00     1.000e+00    
- mulua             1.000e+00     1.000e+00     1.000e+00    
- mulub             1.000e+00     1.000e+00     1.000e+00    
-  
- 
-1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
- ******  
- * =======================================================================
-
-  ******  element node table
-                                                                                      
- 0                cpad1            cpad2            vdd              vss              
-                  vcm              vbias                                              
- in_cm            vcm              vin_p            vin_n                             
- in_n             vin_n            m2:g                                               
- in_p             vin_p            m1:g                                               
- node_tail        m1:s             m2:s             m3:d                              
- out_n            r2               cpad2            m1:d                              
- out_p            r1               cpad1            m2:d                              
- v_bias           vbias            m3:g                                               
- vdd              r1               r2               vdd                               
- vss              vss              m1:b             m2:b             m3:s             
-                  m3:b                                                                
- **info** set option symb=1 internally to help for convergence.
- *****************************************************************
- ******  option summary
- ******
- runlvl  = 3         bypass  = 2         
-1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
- ******  
- * =======================================================================
-
-  ******  operating point information tnom=  25.000 temp=  25.000 *****
- ***** operating point status is voltage   simulation time is   0.000e+00
-    node    =voltage      node    =voltage      node    =voltage
-
- +0:in_cm   = 9.000e-01 0:in_n    = 1.300e+00 0:in_p    = 5.000e-01
- +0:node_tai= 5.038e-01 0:out_n   = 1.800e+00 0:out_p   = 1.733e+00
- +0:v_bias  = 6.500e-01 0:vdd     = 1.800e+00 0:vss     = 0.000e+00
-
- **warning** no probe statements specified, thus .tr# omitted
+  **error** (c:\users\junio\vscode\pcie_serdes\cml_driver_018.sp:26) Reference n_18 not found, or instance width or length does not fit into the wmax/wmin or lmax/lmin range.  It was referenced in element m3. The channel width=   1.200E-04 and length=   3.600E-07 .Please enter channel width  and length that do not exceed the referenced maximal area Lmax=   5.000E-05 Lmin=   1.800E-07 Wmax=   1.000E-04 Wmin=   2.500E-07
   **warning** PSF format is not supported on this platform.
 
-          ***** job concluded
+          ***** job aborted
 1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
  ******  
  * =======================================================================
@@ -416,7 +269,7 @@
 
 
   ******  Circuit Statistics  ******
-  # nodes       =      16 # elements   =      13
+  # nodes       =      14 # elements   =      13
   # resistors   =       2 # capacitors =       2 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
   # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
@@ -430,19 +283,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.00           1           7
-  transient          0.03       10001         915         384 rev=        26
-  readin             0.09
-  errchk             0.01
-  setup              0.02
+  op point           0.00           1           0
+  transient          0.00       10001           0           0 rev=         0
+  readin             0.06
+  errchk             0.00
+  setup              0.00
   output             0.00
 
 
-           total memory used          198  kbytes
-           total cpu time            0.17 seconds
-           total elapsed time        0.23 seconds
-           job started at     16:23:15 08/02/2026
-           job ended   at     16:23:15 08/02/2026
+           total memory used          178  kbytes
+           total cpu time            0.07 seconds
+           total elapsed time        0.12 seconds
+           job started at     23:13:55 08/03/2026
+           job ended   at     23:13:55 08/03/2026
 
 
   lic: Release hspice token(s) 

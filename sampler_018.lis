@@ -134,6 +134,8 @@
      0:drend_rnhr1000                                          = 0.000e+00      
      0:drs_rnhr1000                                            = 0.000e+00      
      0:ddw_rnhr1000                                            = 0.000e+00      
+     0:v_precharge_p                                           =-1.235e-29      
+     0:t_latch_delay                                           =-1.235e-29      
 
 
 
@@ -514,7 +516,12 @@
  +0:out_n   = 1.800e+00 0:out_p   = 1.800e+00 0:vdd     = 1.800e+00
  +0:vss     = 0.000e+00
 
- **warning** no probe statements specified, thus .tr# omitted
+ ******  
+ * =======================================================================
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+   v_precharge_p=  1.7558E+00
+   t_latch_delay=  1.6359E-10  targ=  1.7859E-10   trig=  1.5000E-11
   **warning** PSF format is not supported on this platform.
 
           ***** job concluded
@@ -547,19 +554,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.01           1          19
+  op point           0.00           1          19
   transient          0.04        4001        1220         428 rev=        38
-  readin             0.05
+  readin             0.07
   errchk             0.01
-  setup              0.01
+  setup              0.02
   output             0.00
 
 
            total memory used          214  kbytes
-           total cpu time            0.12 seconds
-           total elapsed time        0.19 seconds
-           job started at     16:12:35 08/02/2026
-           job ended   at     16:12:35 08/02/2026
+           total cpu time            0.16 seconds
+           total elapsed time        0.21 seconds
+           job started at     22:30:55 08/03/2026
+           job ended   at     22:30:55 08/03/2026
 
 
   lic: Release hspice token(s) 

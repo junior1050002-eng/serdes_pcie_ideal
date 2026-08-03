@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "E-2010.12 32-BIT"
 * "format" "HSP"
-* "rundate" "16:48:25 08/02/2026 "
+* "rundate" "23:54:24 08/03/2026 "
 * "netlist" "c:\users\junio\vscode\pcie_serdes\pcie_gen4_hspice_netlist_template.sp "
 * "runtitle" "* ===================================================================="
 * time =  0.000e+00       
@@ -10,13 +10,15 @@
 .option 
 + gmindc= 1.000e-12       
 .nodeset
-+ in_n = 5.000e-01       
-+ in_p = 5.000e-01       
-+ out_ctle_n = 3.758e-01       
-+ out_ctle_p = 6.242e-01       
-+ v_bias = 5.000e-01       
-+ vdd = 1.000e+00       
++ in_n = 9.000e-01       
++ in_p = 9.000e-01       
++ out_ctle_n = 1.056e+00       
++ out_ctle_p = 1.056e+00       
++ v_bias = 9.000e-01       
++ vdd = 1.800e+00       
 + vss = 0.000e+00       
-+ x_ctle.node_a =-2.268e-01       
-+ x_ctle.node_b =-1.517e-01       
++ x_ctle.node_a = 2.511e-01       
++ x_ctle.node_b = 2.511e-01       
++ x_ctle.node_tail = 2.098e-01       
++ x_ctle.v_bias = 7.800e-01       
 ***   END: Saved Operating Point ***                     

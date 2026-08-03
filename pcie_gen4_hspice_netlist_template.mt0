@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='E-2010.12 32-BIT'
+.TITLE '* ======================================================================'
+ vdiff_max        vdiff_min        vdiff_p2p        temper            
+ alter#            
+  8.816e-01       -8.812e-01        1.762e+00        2.500e+01        
+ 1                 

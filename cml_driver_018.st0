@@ -10,7 +10,7 @@
  lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120
  lic: 1(in_use)/999(total) FLOATING license(s) on SERVER localhost
  lic:
- init: begin read circuit files,  cpu clock=  7.00E-02
+ init: begin read circuit files,  cpu clock=  5.30E-02
        option search   = C:\synopsys\Hspice_E-2010.12\PARTS\behave\
        option search   = C:\synopsys\Hspice_E-2010.12\PARTS\AD\
        option search   = C:\synopsys\Hspice_E-2010.12\PARTS\XILINX\
@@ -33,26 +33,7 @@
        option ingold   =     2.00
        option list
        option node
- init: end read circuit files,  cpu clock=  1.51E-01 memory=    151 kb
- init: begin check errors,  cpu clock=  1.51E-01
- init: end check errors,  cpu clock=  1.60E-01 memory=    179 kb
- init: begin setup matrix, pivot=     0 cpu clock=  1.60E-01
-       establish matrix -- done,  cpu clock=  1.72E-01 memory=    183 kb
-       re-order matrix -- done,  cpu clock=  1.77E-01 memory=    184 kb
- init: end setup matrix,  cpu clock=  1.80E-01 memory=    197 kb
- dcop: begin dcop,  cpu clock=  1.82E-01
- dcop: end dcop,  cpu clock=  1.86E-01 memory=    197 kb  tot_iter=       7
- sweep: tran tran0    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.91E-01
- tran: time= 1.0284E-09 tot_iter=     117 conv_iter=      51 cpu clock= 1.94E-01
- tran: time= 2.0000E-09 tot_iter=     193 conv_iter=      83 cpu clock= 1.98E-01
- tran: time= 3.0236E-09 tot_iter=     297 conv_iter=     126 cpu clock= 2.00E-01
- tran: time= 4.0000E-09 tot_iter=     373 conv_iter=     158 cpu clock= 2.03E-01
- tran: time= 5.0236E-09 tot_iter=     477 conv_iter=     201 cpu clock= 2.06E-01
- tran: time= 6.0000E-09 tot_iter=     553 conv_iter=     233 cpu clock= 2.08E-01
- tran: time= 7.0236E-09 tot_iter=     657 conv_iter=     276 cpu clock= 2.09E-01
- tran: time= 8.0250E-09 tot_iter=     735 conv_iter=     309 cpu clock= 2.09E-01
- tran: time= 9.0236E-09 tot_iter=     837 conv_iter=     351 cpu clock= 2.17E-01
- tran: time= 1.0000E-08 tot_iter=     913 conv_iter=     383 cpu clock= 2.22E-01
- sweep: tran tran0    end,  cpu clock=  2.24E-01 memory=    198 kb
->info:         ***** hspice job concluded
+ init: end read circuit files,  cpu clock=  1.04E-01 memory=    151 kb
+ init: begin check errors,  cpu clock=  1.04E-01
+>error          ***** hspice job aborted
  lic: Release hspice token(s)

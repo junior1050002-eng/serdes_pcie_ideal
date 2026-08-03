@@ -269,12 +269,12 @@
  node1               0:node_a      0:node_b      0:vdd      0:vdd   
  node2               0:node_tai    0:node_tai    0:out_p    0:out_n 
  model                                                              
- res eff           2.500e+02     2.500e+02     1.200e+03  1.200e+03 
+ res eff           5.000e+01     5.000e+01     9.000e+02  9.000e+02 
  tc1                 0.            0.            0.         0.      
  tc2                 0.            0.            0.         0.      
  scale             1.000e+00     1.000e+00     1.000e+00  1.000e+00 
  m                 1.000e+00     1.000e+00     1.000e+00  1.000e+00 
- ac                2.500e+02     2.500e+02     1.200e+03  1.200e+03 
+ ac                5.000e+01     5.000e+01     9.000e+02  9.000e+02 
  temp              2.500e+01     2.500e+01     2.500e+01  2.500e+01 
  l                   0.            0.            0.         0.      
  w                   0.            0.            0.         0.      
@@ -290,7 +290,7 @@
  node1               0:node_a 
  node2               0:node_b 
  model                        
- cap eff           3.500e-13  
+ cap eff           1.600e-13  
  tc1               0.000e+00  
  tc2               0.000e+00  
  scale             1.000e+00  
@@ -309,7 +309,7 @@
   vcm  in_cm             0                  9.000e-01  0.000e+00  0.000e+00 dc   
   vin_p  in_p              in_cm              0.000e+00  5.000e-01  0.000e+00 dc   
   vin_n  in_n              in_cm              0.000e+00  5.000e-01  1.800e+02 dc   
-  vbias  v_bias            0                  6.500e-01  0.000e+00  0.000e+00 dc   
+  vbias  v_bias            0                  7.800e-01  0.000e+00  0.000e+00 dc   
 
 
  **** mosfets
@@ -325,14 +325,14 @@
  source              0:node_a    0:node_b    0:vss      
  bulk                0:vss       0:vss       0:vss      
  model               0:n_18.1    0:n_18.1    0:n_18.1   
- w eff             9.979e-06   9.979e-06   1.998e-05    
- l eff             1.497e-07   1.497e-07   3.235e-07    
- rd eff            2.080e-01   2.080e-01   1.040e-01    
- rs eff            2.080e-01   2.080e-01   1.040e-01    
- cdsat             7.780e-16   7.780e-16   1.483e-15    
- cssat             7.780e-16   7.780e-16   1.483e-15    
- capbd             1.184e-14   1.184e-14   2.353e-14    
- capbs             1.184e-14   1.184e-14   2.353e-14    
+ w eff             3.598e-05   3.598e-05   4.998e-05    
+ l eff             1.501e-07   1.501e-07   3.237e-07    
+ rd eff            5.778e-02   5.778e-02   4.160e-02    
+ rs eff            5.778e-02   5.778e-02   4.160e-02    
+ cdsat             2.612e-15   2.612e-15   3.599e-15    
+ cssat             2.612e-15   2.612e-15   3.599e-15    
+ capbd             4.224e-14   4.224e-14   5.862e-14    
+ capbs             4.224e-14   4.224e-14   5.862e-14    
  temp              2.500e+01   2.500e+01   2.500e+01    
  aic                                                    
  nf                1.000e+00   1.000e+00   1.000e+00    
@@ -378,8 +378,8 @@
     node    =voltage      node    =voltage      node    =voltage
 
  +0:in_cm   = 9.000e-01 0:in_n    = 9.000e-01 0:in_p    = 9.000e-01
- +0:node_a  = 3.000e-01 0:node_b  = 3.000e-01 0:node_tai= 2.626e-01
- +0:out_n   = 1.620e+00 0:out_p   = 1.620e+00 0:v_bias  = 6.500e-01
+ +0:node_a  = 2.511e-01 0:node_b  = 2.511e-01 0:node_tai= 2.098e-01
+ +0:out_n   = 1.056e+00 0:out_p   = 1.056e+00 0:v_bias  = 7.800e-01
  +0:vdd     = 1.800e+00 0:vss     = 0.000e+00
 
 
@@ -387,11 +387,11 @@
 
  subckt                                                                    
  element  0:vdd      0:vss      0:vcm      0:vin_p    0:vin_n    0:vbias   
-  volts    1.800e+00  0.000e+00  9.000e-01  0.000e+00  0.000e+00  6.500e-01
-  current -2.991e-04  2.991e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00
-  power    5.384e-04  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+  volts    1.800e+00  0.000e+00  9.000e-01  0.000e+00  0.000e+00  7.800e-01
+  current -1.652e-03  1.652e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+  power    2.973e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
 
-     total voltage source power dissipation=  5.384e-04       watts
+     total voltage source power dissipation=  2.973e-03       watts
 
 
 
@@ -399,10 +399,10 @@
 
  subckt                                              
  element  0:rs1      0:rs2      0:rl1      0:rl2     
-  r value  2.500e+02  2.500e+02  1.200e+03  1.200e+03
-  v drop   3.739e-02  3.739e-02  1.795e-01  1.795e-01
-  current  1.495e-04  1.495e-04  1.495e-04  1.495e-04
-  power    5.591e-06  5.591e-06  2.684e-05  2.684e-05
+  r value  5.000e+01  5.000e+01  9.000e+02  9.000e+02
+  v drop   4.129e-02  4.129e-02  7.432e-01  7.432e-01
+  current  8.258e-04  8.258e-04  8.258e-04  8.258e-04
+  power    3.410e-05  3.410e-05  6.137e-04  6.137e-04
 
 
 
@@ -412,27 +412,27 @@
  subckt                                   
  element  0:m1       0:m2       0:m3      
  model    0:n_18.1   0:n_18.1   0:n_18.1  
- region     Saturati   Saturati   Saturati
-  id       1.495e-04  1.495e-04  2.991e-04
-  ibs     -2.335e-16 -2.335e-16 -4.614e-20
-  ibd     -1.261e-15 -1.261e-15 -3.895e-16
-  vgs      6.000e-01  6.000e-01  6.500e-01
-  vds      1.320e+00  1.320e+00  2.626e-01
-  vbs     -3.000e-01 -3.000e-01  0.000e+00
-  vth      5.180e-01  5.180e-01  4.767e-01
-  vdsat    1.287e-01  1.287e-01  1.804e-01
-  vod      8.200e-02  8.200e-02  1.733e-01
-  beta     2.000e-02  2.000e-02  1.848e-02
-  gam eff  5.152e-01  5.152e-01  5.074e-01
-  gm       1.929e-03  1.929e-03  2.662e-03
-  gds      7.147e-05  7.147e-05  1.831e-04
-  gmb      2.327e-04  2.327e-04  4.782e-04
-  cdtot    1.178e-14  1.178e-14  2.984e-14
-  cgtot    1.807e-14  1.807e-14  5.644e-14
-  cstot    2.441e-14  2.441e-14  7.172e-14
-  cbtot    2.104e-14  2.104e-14  5.543e-14
-  cgs      1.294e-14  1.294e-14  4.463e-14
-  cgd      3.609e-15  3.609e-15  7.581e-15
+ region     Saturati   Saturati     Linear
+  id       8.258e-04  8.258e-04  1.652e-03
+  ibs     -6.559e-16 -6.559e-16 -2.473e-19
+  ibd     -2.760e-15 -2.760e-15 -7.549e-16
+  vgs      6.489e-01  6.489e-01  7.800e-01
+  vds      8.057e-01  8.057e-01  2.098e-01
+  vbs     -2.511e-01 -2.511e-01  0.000e+00
+  vth      5.288e-01  5.288e-01  4.770e-01
+  vdsat    1.510e-01  1.510e-01  2.645e-01
+  vod      1.201e-01  1.201e-01  3.030e-01
+  beta     7.180e-02  7.180e-02  4.594e-02
+  gam eff  5.140e-01  5.140e-01  5.074e-01
+  gm       8.743e-03  8.743e-03  7.618e-03
+  gds      3.652e-04  3.652e-04  3.408e-03
+  gmb      1.097e-03  1.097e-03  1.378e-03
+  cdtot    4.506e-14  4.506e-14  9.614e-14
+  cgtot    6.629e-14  6.629e-14  1.467e-13
+  cstot    8.997e-14  8.997e-14  1.808e-13
+  cbtot    7.881e-14  7.881e-14  1.394e-13
+  cgs      4.806e-14  4.806e-14  1.100e-13
+  cgd      1.296e-14  1.296e-14  2.743e-14
 
 
 
@@ -475,19 +475,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.00           1           7
-  ac analysis        0.03          81          81
-  readin             0.05
+  op point           0.01           1           7
+  ac analysis        0.05          89          89
+  readin             0.07
   errchk             0.01
   setup              0.01
   output             0.00
 
 
            total memory used          200  kbytes
-           total cpu time            0.13 seconds
-           total elapsed time        0.18 seconds
-           job started at     16:22:22 08/02/2026
-           job ended   at     16:22:22 08/02/2026
+           total cpu time            0.16 seconds
+           total elapsed time        0.20 seconds
+           job started at     23:54:00 08/03/2026
+           job ended   at     23:54:01 08/03/2026
 
 
   lic: Release hspice token(s) 

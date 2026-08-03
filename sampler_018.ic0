@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "E-2010.12 32-BIT"
 * "format" "HSP"
-* "rundate" "16:12:35 08/02/2026 "
+* "rundate" "22:30:55 08/03/2026 "
 * "netlist" "c:\users\junio\vscode\pcie_serdes\sampler_018.sp "
 * "runtitle" "* ===================================================================="
 * time =  0.000e+00       

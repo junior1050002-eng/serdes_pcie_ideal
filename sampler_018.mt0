@@ -1,0 +1,4 @@
+$DATA1 SOURCE='HSPICE' VERSION='E-2010.12 32-BIT'
+.TITLE '* ======================================================================'
+ v_precharge_p    t_latch_delay    temper           alter#            
+  1.755e+00        1.636e-10        2.500e+01       1                 

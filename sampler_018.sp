@@ -41,4 +41,12 @@ M_RST4 NODE_R CLK VDD VDD P_18 W=6u L=0.18u
 
 * 4. Transient Analysis
 .tran 1ps 4ns
+
+* 2010.12 相容波形輸出：輸出 CLK、單端點及差動電壓波形
+.probe tran v(CLK) v(OUT_P) v(OUT_N) v(OUT_P, OUT_N)
+
+* 2010.12 相容測量：測量預充電準位與 Latch 再生延遲時間
+.meas tran v_precharge_p find v(OUT_P) when v(CLK)=0.1 fall=1
+.meas tran t_latch_delay trig v(CLK) val=0.9V rise=1 targ v(OUT_P) val=1.62V rise=1
+
 .end
