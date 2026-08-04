@@ -1,6 +1,6 @@
 $DATA1 SOURCE='HSPICE' VERSION='E-2010.12 32-BIT'
 .TITLE '* ======================================================================'
- vdiff_max        vdiff_min        vdiff_p2p        temper            
+ v_ctle_max       i_total_avg      p_total_avg      temper            
  alter#            
-  7.237e-01       -7.229e-01        1.446e+00        2.500e+01        
+  3.134e-01       -2.356e-02        4.241e-02        2.500e+01        
  1                 

@@ -10,7 +10,7 @@
   lic:  
   lic: FLEXlm: v10.8 
   lic: USER:   junio                HOSTNAME: LAPTOP-3R2P9I5V 
-  lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00e04c6803f1 00ffdda35f06 ec3a56096030
+  lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00ffdda35f06 ec3a56096030 ee3a56096030
   
   lic: Using FLEXlm license file: 
   lic: 27000@localhost 
@@ -277,12 +277,12 @@
  node1               0:in_p        0:in_n        1:node_a       1:node_b    
  node2               0:v_bias      0:v_bias      1:node_tail    1:node_tail 
  model                                                                      
- res eff           5.000e+01     5.000e+01     5.000e+01      5.000e+01     
+ res eff           5.000e+01     5.000e+01     7.500e+01      7.500e+01     
  tc1                 0.            0.            0.             0.          
  tc2                 0.            0.            0.             0.          
  scale             1.000e+00     1.000e+00     1.000e+00      1.000e+00     
  m                 1.000e+00     1.000e+00     1.000e+00      1.000e+00     
- ac                5.000e+01     5.000e+01     5.000e+01      5.000e+01     
+ ac                5.000e+01     5.000e+01     7.500e+01      7.500e+01     
  temp              2.500e+01     2.500e+01     2.500e+01      2.500e+01     
  l                   0.            0.            0.             0.          
  w                   0.            0.            0.             0.          
@@ -295,12 +295,12 @@
  node1               0:vdd         0:vdd      
  node2               0:out_ctle    0:out_ctle 
  model                                        
- res eff           9.000e+02     9.000e+02    
+ res eff           6.500e+02     6.500e+02    
  tc1                 0.            0.         
  tc2                 0.            0.         
  scale             1.000e+00     1.000e+00    
  m                 1.000e+00     1.000e+00    
- ac                9.000e+02     9.000e+02    
+ ac                6.500e+02     6.500e+02    
  temp              2.500e+01     2.500e+01    
  l                   0.            0.         
  w                   0.            0.         
@@ -316,7 +316,7 @@
  node1               0:in_p       0:in_n       1:node_a 
  node2               0:0          0:0          1:node_b 
  model                                                  
- cap eff           8.000e-14    8.000e-14    1.600e-13  
+ cap eff           6.000e-14    6.000e-14    1.000e-13  
  tc1               0.000e+00    0.000e+00    0.000e+00  
  tc2               0.000e+00    0.000e+00    0.000e+00  
  scale             1.000e+00    1.000e+00    1.000e+00  
@@ -64338,7 +64338,7 @@
 
 
   v_bias  v_bias            0                  9.000e-01  0.000e+00  0.000e+00 dc   
- x_ctle.v_bias x_ctle.v_bias            0                  7.800e-01  0.000e+00  0.000e+00 dc   
+ x_ctle.v_bias x_ctle.v_bias            0                  8.000e-01  0.000e+00  0.000e+00 dc   
 
 
  **** mosfets
@@ -64354,14 +64354,14 @@
  source              1:node_a      1:node_b      0:vss       
  bulk                0:vss         0:vss         0:vss       
  model               0:n_18.1      0:n_18.1      0:n_18.1    
- w eff             3.598e-05     3.598e-05     4.998e-05     
+ w eff             2.998e-05     2.998e-05     5.998e-05     
  l eff             1.501e-07     1.501e-07     3.237e-07     
- rd eff            5.778e-02     5.778e-02     4.160e-02     
- rs eff            5.778e-02     5.778e-02     4.160e-02     
- cdsat             2.612e-15     2.612e-15     3.599e-15     
- cssat             2.612e-15     2.612e-15     3.599e-15     
- capbd             4.224e-14     4.224e-14     5.862e-14     
- capbs             4.224e-14     4.224e-14     5.862e-14     
+ rd eff            6.933e-02     6.933e-02     3.467e-02     
+ rs eff            6.933e-02     6.933e-02     3.467e-02     
+ cdsat             2.188e-15     2.188e-15     4.304e-15     
+ cssat             2.188e-15     2.188e-15     4.304e-15     
+ capbd             3.523e-14     3.523e-14     7.032e-14     
+ capbs             3.523e-14     3.523e-14     7.032e-14     
  temp              2.500e+01     2.500e+01     2.500e+01     
  aic                                                         
  nf                1.000e+00     1.000e+00     1.000e+00     
@@ -64420,20 +64420,20 @@
  ***** operating point status is voltage   simulation time is   0.000e+00
     node    =voltage      node    =voltage      node    =voltage
 
- +0:in_n    = 9.000e-01 0:in_p    = 9.000e-01 0:out_ctle= 1.056e+00
- +0:out_ctle= 1.056e+00 0:v_bias  = 9.000e-01 0:vdd     = 1.800e+00
- +0:vss     = 0.000e+00 1:node_a  = 2.511e-01 1:node_b  = 2.511e-01
- +1:node_tai= 2.098e-01 1:v_bias  = 7.800e-01
+ +0:in_n    = 9.000e-01 0:in_p    = 9.000e-01 0:out_ctle= 1.193e+00
+ +0:out_ctle= 1.193e+00 0:v_bias  = 9.000e-01 0:vdd     = 1.800e+00
+ +0:vss     = 0.000e+00 1:node_a  = 2.292e-01 1:node_b  = 2.292e-01
+ +1:node_tai= 1.592e-01 1:v_bias  = 8.000e-01
 
  ******  
  * =======================================================================
 
   ******  transient analysis tnom=  25.000 temp=  25.000 *****
-   vdiff_max=  8.8160E-01    at=  1.2217E-08
+   vdiff_max=  7.2367E-01    at=  1.2199E-08
                from=  5.0000E-09    to=  6.4000E-08
-   vdiff_min= -8.8119E-01    at=  1.4092E-08
+   vdiff_min= -7.2293E-01    at=  1.4074E-08
                from=  5.0000E-09    to=  6.4000E-08
-   vdiff_p2p=  1.7628E+00
+   vdiff_p2p=  1.4466E+00
   **warning** PSF format is not supported on this platform.
 
           ***** job concluded
@@ -64466,19 +64466,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.00           1           7
-  transient          0.20      700001       35852       17619 rev=         0
-  readin             0.21
-  errchk             0.07
-  setup              0.01
+  op point           0.01           1           6
+  transient          0.30      700001       35611       17623 rev=         2
+  readin             0.31
+  errchk             0.10
+  setup              0.02
   output             0.00
 
 
            total memory used         1313  kbytes
-           total cpu time            0.51 seconds
-           total elapsed time        0.55 seconds
-           job started at     23:54:24 08/03/2026
-           job ended   at     23:54:25 08/03/2026
+           total cpu time            0.77 seconds
+           total elapsed time        0.84 seconds
+           job started at     11:35:50 08/04/2026
+           job ended   at     11:35:51 08/04/2026
 
 
   lic: Release hspice token(s) 

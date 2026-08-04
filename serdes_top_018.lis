@@ -1,0 +1,814 @@
+ ****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+  Copyright (C) 2010 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: c:\users\junio\vscode\pcie_serdes\serdes_top_018.sp               
+  Command line options: -i c:\users\junio\vscode\pcie_serdes\serdes_top_018.sp -o c:\users\junio\vscode\pcie_serdes\serdes_top_018.lis
+  lic:  
+  lic: FLEXlm: v10.8 
+  lic: USER:   junio                HOSTNAME: LAPTOP-3R2P9I5V 
+  lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00ffdda35f06 ec3a56096030 ee3a56096030
+  
+  lic: Using FLEXlm license file: 
+  lic: 27000@localhost 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120 
+  lic: 1(in_use)/999(total) FLOATING license(s) on SERVER localhost 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice_E-2010.12\meta.cfg
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_tx_driver.                    cml_driver_block   1.00 
+        2 x_rx_ctle.                      ctle_block         1.00 
+        3 x_rx_sampler.                   sampler_block      1.00 
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+     0:dtox_n_18                                               = 0.000e+00      
+     0:dxl_n_18                                                = 0.000e+00      
+     0:dxw_n_18                                                = 0.000e+00      
+     0:dvth0_n_18                                              = 0.000e+00      
+     0:du0_n_18                                                = 0.000e+00      
+     0:dlvth0_n_18                                             = 0.000e+00      
+     0:dwvth0_n_18                                             = 0.000e+00      
+     0:dwu0_n_18                                               = 0.000e+00      
+     0:dpvth0_n_18                                             = 0.000e+00      
+     0:dpvsat_n_18                                             = 0.000e+00      
+     0:dcgdo_n_18                                              = 0.000e+00      
+     0:dcgso_n_18                                              = 0.000e+00      
+     0:dcj_n_18                                                = 0.000e+00      
+     0:dcjsw_n_18                                              = 0.000e+00      
+     0:dcjgate_n_18                                            = 0.000e+00      
+     0:dtox_p_18                                               = 0.000e+00      
+     0:du0_p_18                                                = 0.000e+00      
+     0:dxl_p_18                                                = 0.000e+00      
+     0:dxw_p_18                                                = 0.000e+00      
+     0:dvth0_p_18                                              = 0.000e+00      
+     0:dlvth0_p_18                                             = 0.000e+00      
+     0:dwvth0_p_18                                             = 0.000e+00      
+     0:dpvth0_p_18                                             = 0.000e+00      
+     0:dcgdo_p_18                                              = 0.000e+00      
+     0:dpvsat_p_18                                             = 0.000e+00      
+     0:dcgso_p_18                                              = 0.000e+00      
+     0:dcj_p_18                                                = 0.000e+00      
+     0:dcjsw_p_18                                              = 0.000e+00      
+     0:dcjgate_p_18                                            = 0.000e+00      
+     0:dtox_n_bpw_18                                           = 0.000e+00      
+     0:dxl_n_bpw_18                                            = 0.000e+00      
+     0:dxw_n_bpw_18                                            = 0.000e+00      
+     0:dvth0_n_bpw_18                                          = 0.000e+00      
+     0:du0_n_bpw_18                                            = 0.000e+00      
+     0:dlvth0_n_bpw_18                                         = 0.000e+00      
+     0:dwvth0_n_bpw_18                                         = 0.000e+00      
+     0:dwu0_n_bpw_18                                           = 0.000e+00      
+     0:dpvth0_n_bpw_18                                         = 0.000e+00      
+     0:dpvsat_n_bpw_18                                         = 0.000e+00      
+     0:dcgdo_n_bpw_18                                          = 0.000e+00      
+     0:dcgso_n_bpw_18                                          = 0.000e+00      
+     0:dcj_n_bpw_18                                            = 0.000e+00      
+     0:dcjsw_n_bpw_18                                          = 0.000e+00      
+     0:dcjgate_n_bpw_18                                        = 0.000e+00      
+     0:dtox_n_33                                               = 0.000e+00      
+     0:dlint_n_33                                              = 0.000e+00      
+     0:dwint_n_33                                              = 0.000e+00      
+     0:dvth0_n_33                                              = 0.000e+00      
+     0:dcgdo_n_33                                              = 0.000e+00      
+     0:dcgso_n_33                                              = 0.000e+00      
+     0:dtox_p_33                                               = 0.000e+00      
+     0:dlint_p_33                                              = 0.000e+00      
+     0:dwint_p_33                                              = 0.000e+00      
+     0:dvth0_p_33                                              = 0.000e+00      
+     0:dcgdo_p_33                                              = 0.000e+00      
+     0:dcgso_p_33                                              = 0.000e+00      
+     0:dtox_n_bpw_33                                           = 0.000e+00      
+     0:dlint_n_bpw_33                                          = 0.000e+00      
+     0:dwint_n_bpw_33                                          = 0.000e+00      
+     0:dvth0_n_bpw_33                                          = 0.000e+00      
+     0:dcgdo_n_bpw_33                                          = 0.000e+00      
+     0:dcgso_n_bpw_33                                          = 0.000e+00      
+     0:dtox_n_lv_18                                            = 0.000e+00      
+     0:dlint_n_lv_18                                           = 0.000e+00      
+     0:dwint_n_lv_18                                           = 0.000e+00      
+     0:dvth0_n_lv_18                                           = 0.000e+00      
+     0:dcgdo_n_lv_18                                           = 0.000e+00      
+     0:dcgso_n_lv_18                                           = 0.000e+00      
+     0:dtox_p_lv_18                                            = 0.000e+00      
+     0:dlint_p_lv_18                                           = 0.000e+00      
+     0:dwint_p_lv_18                                           = 0.000e+00      
+     0:dvth0_p_lv_18                                           = 0.000e+00      
+     0:dcgdo_p_lv_18                                           = 0.000e+00      
+     0:dcgso_p_lv_18                                           = 0.000e+00      
+     0:dtox_n_lv_33                                            = 0.000e+00      
+     0:dlint_n_lv_33                                           = 0.000e+00      
+     0:dwint_n_lv_33                                           = 0.000e+00      
+     0:dvth0_n_lv_33                                           = 0.000e+00      
+     0:dcgdo_n_lv_33                                           = 0.000e+00      
+     0:dcgso_n_lv_33                                           = 0.000e+00      
+     0:dtox_p_lv_33                                            = 0.000e+00      
+     0:dlint_p_lv_33                                           = 0.000e+00      
+     0:dwint_p_lv_33                                           = 0.000e+00      
+     0:dvth0_p_lv_33                                           = 0.000e+00      
+     0:dcgdo_p_lv_33                                           = 0.000e+00      
+     0:dcgso_p_lv_33                                           = 0.000e+00      
+     0:dtox_n_zero_18                                          = 0.000e+00      
+     0:dlint_n_zero_18                                         = 0.000e+00      
+     0:dwint_n_zero_18                                         = 0.000e+00      
+     0:dvth0_n_zero_18                                         = 0.000e+00      
+     0:dcgdo_n_zero_18                                         = 0.000e+00      
+     0:dcgso_n_zero_18                                         = 0.000e+00      
+     0:dtox_n_zero_33                                          = 0.000e+00      
+     0:dlint_n_zero_33                                         = 0.000e+00      
+     0:dwint_n_zero_33                                         = 0.000e+00      
+     0:dvth0_n_zero_33                                         = 0.000e+00      
+     0:dcgdo_n_zero_33                                         = 0.000e+00      
+     0:dcgso_n_zero_33                                         = 0.000e+00      
+     0:drend_rnnpo                                             = 0.000e+00      
+     0:drs_rnnpo                                               = 0.000e+00      
+     0:ddw_rnnpo                                               = 0.000e+00      
+     0:drend_rnppo                                             = 0.000e+00      
+     0:drs_rnppo                                               = 0.000e+00      
+     0:ddw_rnppo                                               = 0.000e+00      
+     0:drend_rnhr1000                                          = 0.000e+00      
+     0:drs_rnhr1000                                            = 0.000e+00      
+     0:ddw_rnhr1000                                            = 0.000e+00      
+     0:v_ctle_max                                              =-1.235e-29      
+     0:i_total_avg                                             =-1.235e-29      
+     0:p_total_avg                                             =-1.235e-29      
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            2.9815e+02   4.1163e-21   2.5692e-02   1.1156e+00   1.2565e+16 
+  **info** (c:\users\junio\vscode\pcie_serdes\serdes_top_018.sp:17) DC voltage reset to initial transient source value              in source        0:vclk                new dc=  0.0000D+00
+ ***************************************************************************
+ ***        model parameters  model name:   0:n_18.1   model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+       hspver=    2006.03               level=         49         
+      version=        3.2            paramchk=          0         
+       apwarn=          1                lite=          0         
+       vgslim=          0             binUnit=          1         
+       capMod=          2               xpart=          1         
+       mobMod=          1              nqsMod=          0         
+       stiMod=          0                 elm=          5         
+     sfvtflag=          0                 tox=   4.2e-009 meter   
+           xj=   1.6e-007 meter       binflag=          0         
+         lmin=   1.8e-007 meter          lmax=     5e-005 meter   
+         wmin=   2.5e-007 meter          wmax=     0.0001 meter   
+         lref=          0 meter          wref=          0 meter   
+         lint= 1.587e-008 meter          wint= 1.022e-008 meter   
+        lmult=          1               wmult=          1         
+           ll=-1.062e-015                 lln=          1         
+           lw= 2.996e-015                 lwn=          1         
+          lwl=          0                  wl=          0         
+          wln=          1                  ww= 7.262e-016         
+          wwn=          1                 wwl=          0         
+          dwg=-3.396e-009 m/V             dwb= 1.346e-009 m/V^1/2 
+           xl= -1.05e-008                  xw=          0         
+           a0=       1.93                 ags=     0.5072 V^-1    
+           b0= 1.486e-006 meter            b1= 9.064e-006 meter   
+         keta=    0.01752 V^-1           voff=    -0.1088 V       
+        ngate=     1e+023 cm^-3           vbx=          0 V       
+          vbm=         -3 V                xt=  1.55e-007 meter   
+         vth0=     0.3075 V               nch=3.7446e+017 cm^-3   
+         nsub=     6e+016 cm^-3           nlx= 4.279e-007 meter   
+       gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+           k1=     0.4578 V^1/2            k2=   -0.02638         
+           k3=     -10.88                 k3b=     0.2379 V^-1    
+           w0=-8.813e-008 meter          dvt0=     0.4042         
+         dvt1=     0.3237                dvt2=    -0.8602 V^-1    
+        dvt0w=      0.383 meter^-1      dvt1w=     600000 meter^-1
+        dvt2w=     -0.025 V^-1           dsub=   0.001592         
+         eta0=   0.001004                etab=  -0.001459 V^-1    
+           u0=      324.1 cm^2/V/sec         ua=-9.201e-010 m/V     
+           ub= 1.907e-018 (m/V)^2          uc= 4.355e-011 V^-1    
+         vsat=      72580 m/sec            a1=          0 v^-1    
+           a2=          1               delta=       0.01 V       
+         rdsw=      4.905 ohm-um         prwg=          0 V^-1    
+         prwb=          0 V^-1/2           wr=          1         
+         pclm=      1.091             pdiblc1=   0.003061         
+      pdiblc2=     1e-006             pdiblcb=          0 V^-1    
+       pscbe1= 4.866e+008 V/m          pscbe2=   2.8e-007 V/m     
+        drout=   0.001592                pvag=    -0.2958         
+      nfactor=      1.038                cdsc=   0.002275 f/m^2   
+        cdscb=  0.0008241 f/V/m^2       cdscd=    -0.0005 f/V/m^2 
+          cit=  -0.001511 f/m^2        alpha0=          0 m/V     
+        beta0=         30 V               dlc=     4e-008 meter   
+          dwc=          0 meter           clc=     1e-007 meter   
+          cle=        0.6                cgso=  2.35e-010 f/m     
+         cgdo=  2.35e-010 f/m            cgbo=          0 f/m     
+         cgsl=          0 f/m            cgdl=          0 f/m     
+       ckappa=        0.6                  cf= 1.533e-010 f/m     
+         acde=          1 m/V            moin=         15 V^1/2   
+         toxm=   4.2e-009 m            dtoxcv=          0 m       
+          vfb (not used)                alpha1=          0 1/V     
+         ijth=          0 A              noff=          1         
+       voffcv=          0                 tcj=          0 1/K     
+        tcjsw=          0 1/K          tcjswg=          0 1/K     
+          tpb=          0 V/K           tpbsw=          0 V/K     
+       tpbswg=          0 V/K             llc= -6.64e-015         
+          lwc=          0                lwlc=          0         
+          wlc=          0                 wwc=          0         
+         wwlc=          0                tnom=     298.15 K       
+          kt1=    -0.2255 V              kt1l=-4.275e-009         
+          kt2=   -0.02527                 ute=     -1.186         
+          ua1= 2.253e-009 m/V             ub1=-2.673e-018 (m/V)^2 
+          uc1=-3.832e-011 m/V^2            at=      14490 m/s     
+          prt=     -10.18         
+          using Berkeley noise model       noiMod=          1         
+         noia=     1e+020                noib=      50000         
+         noic=  -1.4e-012                  em=   4.2e+007         
+           ef=          1                  af=          1         
+           kf=          0              gdsnoi=-1.23457e-029         
+          using Hspice diodes            using ACM 
+          acm=         3                 hdif=  2.6e-007 meter    
+         ldif=    8e-008 meter             js=    1e-006 amp/m^2  
+          jsw=    7e-011 amp/m            xti=         3          
+            n=         1                   cj=   0.00103 f/m^2    
+           mj=     0.443                   pb=     0.823 V        
+         cjsw= 1.34e-010 f/m             mjsw=      0.33          
+          php=      0.88 V               pbsw (not used)           
+       cjgate=    5e-010 f/m            cjswg (not used)           
+        mjswg (not used)                 pbswg (not used)           
+          la0=    -0.4667                lags=     0.3028         
+        lketa=   -0.01942               lvoff=  -0.004208         
+        lvth0=     -0.001                lnlx=-2.854e-008         
+        leta0=   0.001574            lpdiblc2=  -0.004752         
+          wa0=   -0.04731                wags=   0.004242         
+        wvoff= -0.0004078               wvth0=    0.06027         
+          wu0=       0.54                 wua= -1.88e-011         
+        wvsat=       5066                wute=    0.06373         
+          wat=       7067                 pa0=   -0.02649         
+        pvoff= -0.0003788                 pw0=   1.3e-009         
+          pub=   3.8e-020         
+ ***************************************************************************
+ ***        model parameters  model name:   0:p_18.1   model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+       hspver=    2006.03               level=         49         
+      version=        3.2            paramchk=          0         
+       apwarn=          1                lite=          0         
+       vgslim=          0             binUnit=          1         
+       capMod=          2               xpart=          1         
+       mobMod=          3              nqsMod=          0         
+       stiMod=          0                 elm=          5         
+     sfvtflag=          0                 tox=   4.2e-009 meter   
+           xj=     1e-007 meter       binflag=          0         
+         lmin=   1.8e-007 meter          lmax=     5e-005 meter   
+         wmin=   2.5e-007 meter          wmax=     0.0001 meter   
+         lref=          0 meter          wref=          0 meter   
+         lint=-1.041e-008 meter          wint=-1.525e-007 meter   
+        lmult=          1               wmult=          1         
+           ll= 6.635e-015                 lln=          1         
+           lw=-2.873e-016                 lwn=          1         
+          lwl=          0                  wl=          0         
+          wln=          1                  ww= 1.236e-014         
+          wwn=          1                 wwl=          0         
+          dwg=-1.251e-007 m/V             dwb=-1.039e-007 m/V^1/2 
+           xl=    -2e-009                  xw=          0         
+           a0=       1.35                 ags=     0.3818 V^-1    
+           b0=-3.088e-007 meter            b1=          0 meter   
+         keta=    0.01044 V^-1           voff=    -0.1073 V       
+        ngate=     1e+023 cm^-3           vbx=          0 V       
+          vbm=         -3 V                xt=  1.55e-007 meter   
+         vth0=    -0.4555 V               nch= 6.231e+017 cm^-3   
+         nsub=     6e+016 cm^-3           nlx=  2.53e-007 meter   
+       gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+           k1=     0.5704 V^1/2            k2=   0.006973         
+           k3=     -2.833                 k3b=      1.326 V^-1    
+           w0=-1.943e-007 meter          dvt0=     0.4885         
+         dvt1=    0.07578                dvt2=     0.1187 V^-1    
+        dvt0w=    -0.1261 meter^-1      dvt1w=      24790 meter^-1
+        dvt2w=     0.6915 V^-1           dsub=     1.9191         
+         eta0=      1.071                etab=    -0.9291 V^-1    
+           u0=      124.5 cm^2/V/sec         ua=  1.54e-009 m/V     
+           ub= 2.646e-019 (m/V)^2          uc=   -0.09587 V^-1    
+         vsat=      53400 m/sec            a1=          0 v^-1    
+           a2=          1               delta=       0.01 V       
+         rdsw=      792.1 ohm-um         prwg=          0 V^-1    
+         prwb=          0 V^-1/2           wr=          1         
+         pclm=      2.653             pdiblc1=          0         
+      pdiblc2=     5e-006             pdiblcb=          0 V^-1    
+       pscbe1= 4.866e+008 V/m          pscbe2=   2.8e-007 V/m     
+        drout=      1.457                pvag=      1.262         
+      nfactor=      1.535                cdsc=  0.0007578 f/m^2   
+        cdscb=     0.0001 f/V/m^2       cdscd=-2.883e-005 f/V/m^2 
+          cit=  -0.001067 f/m^2        alpha0=          0 m/V     
+        beta0=         30 V               dlc=  7.01e-008 meter   
+          dwc=          0 meter           clc=     1e-007 meter   
+          cle=        0.6                cgso= 2.054e-010 f/m     
+         cgdo= 2.054e-010 f/m            cgbo=          0 f/m     
+         cgsl=          0 f/m            cgdl=          0 f/m     
+       ckappa=        0.6                  cf= 1.533e-010 f/m     
+         acde=          1 m/V            moin=         15 V^1/2   
+         toxm=   4.2e-009 m            dtoxcv=          0 m       
+          vfb (not used)                alpha1=          0 1/V     
+         ijth=          0 A              noff=          1         
+       voffcv=          0                 tcj=          0 1/K     
+        tcjsw=          0 1/K          tcjswg=          0 1/K     
+          tpb=          0 V/K           tpbsw=          0 V/K     
+       tpbswg=          0 V/K             llc= -1.31e-014         
+          lwc=          0                lwlc=          0         
+          wlc=          0                 wwc=          0         
+         wwlc=          0                tnom=     298.15 K       
+          kt1=    -0.2294 V              kt1l=-8.204e-009         
+          kt2=  -0.009487                 ute=    -0.4484         
+          ua1= 4.571e-009 m/V             ub1=-6.026e-018 (m/V)^2 
+          uc1=    -0.0985 m/V^2            at=      12030 m/s     
+          prt=          0         
+          using Berkeley noise model       noiMod=          1         
+         noia=     1e+020                noib=      50000         
+         noic=  -1.4e-012                  em=   4.2e+007         
+           ef=          1                  af=          1         
+           kf=          0              gdsnoi=-1.23457e-029         
+          using Hspice diodes            using ACM 
+          acm=         3                 hdif=  2.6e-007 meter    
+         ldif=    8e-008 meter             js=    3e-006 amp/m^2  
+          jsw= 4.22e-011 amp/m            xti=         3          
+            n=         1                   cj=   0.00124 f/m^2    
+           mj=     0.395                   pb=     0.762 V        
+         cjsw= 1.74e-010 f/m             mjsw=     0.324          
+          php=     0.665 V               pbsw (not used)           
+       cjgate= 1.74e-010 f/m            cjswg (not used)           
+        mjswg (not used)                 pbswg (not used)           
+          la0=     -0.281                lags=    0.04454         
+        lketa=     -0.012               lvoff= -0.0009871         
+        lvth0=     0.0044                lnlx=-1.584e-008         
+          lua=-8.253e-011            lpdiblc2=   0.003012         
+          wa0=   -0.04807                wags=   -0.04277         
+        wvoff=  -0.009816               wvth0=    -0.0148         
+          wua=  2.63e-009               wvsat=     -14200         
+        wrdsw=      10.07                wute=    -0.2682         
+          wat=      -6405                wprt=      226.6         
+          pa0=    0.08661                pags=   -0.04076         
+        pvoff=-9.833e-005               pvth0=     0.0032         
+          pua= 5.855e-011               pvsat=       -434         
+ 
+
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  circuit element summary tnom=  25.000 temp=  25.000 *****
+
+
+ **** resistors
+
+  
+ 
+                                                                          
+ element name        0:r_term_p    0:r_term_n    1:r1          1:r2       
+ node1               0:tx_out_p    0:tx_out_n    0:vdd         0:vdd      
+ node2               0:v_bias      0:v_bias      0:tx_out_p    0:tx_out_n 
+ model                                                                    
+ res eff           5.000e+01     5.000e+01     5.000e+01     5.000e+01    
+ tc1                 0.            0.            0.            0.         
+ tc2                 0.            0.            0.            0.         
+ scale             1.000e+00     1.000e+00     1.000e+00     1.000e+00    
+ m                 1.000e+00     1.000e+00     1.000e+00     1.000e+00    
+ ac                5.000e+01     5.000e+01     5.000e+01     5.000e+01    
+ temp              2.500e+01     2.500e+01     2.500e+01     2.500e+01    
+ l                   0.            0.            0.            0.         
+ w                   0.            0.            0.            0.         
+ cap                 0.            0.            0.            0.         
+ noise            1.000e+00     1.000e+00     1.000e+00     1.000e+00     
+  
+ 
+                                                                            
+ element name        2:rs1          2:rs2          2:rl1         2:rl2      
+ node1               2:node_a       2:node_b       0:vdd         0:vdd      
+ node2               2:node_tail    2:node_tail    0:rx_ctle_    0:rx_ctle_ 
+ model                                                                      
+ res eff           7.500e+01      7.500e+01      6.500e+02     6.500e+02    
+ tc1                 0.             0.             0.            0.         
+ tc2                 0.             0.             0.            0.         
+ scale             1.000e+00      1.000e+00      1.000e+00     1.000e+00    
+ m                 1.000e+00      1.000e+00      1.000e+00     1.000e+00    
+ ac                7.500e+01      7.500e+01      6.500e+02     6.500e+02    
+ temp              2.500e+01      2.500e+01      2.500e+01     2.500e+01    
+ l                   0.             0.             0.            0.         
+ w                   0.             0.             0.            0.         
+ cap                 0.             0.             0.            0.         
+ noise            1.000e+00      1.000e+00      1.000e+00     1.000e+00     
+
+
+ **** capacitors
+  
+ 
+                                                          
+ element name        0:c_esd_p     0:c_esd_n     2:cs     
+ node1               0:tx_out_p    0:tx_out_n    2:node_a 
+ node2               0:0           0:0           2:node_b 
+ model                                                    
+ cap eff           1.000e-13     1.000e-13     1.000e-13  
+ tc1               0.000e+00     0.000e+00     0.000e+00  
+ tc2               0.000e+00     0.000e+00     0.000e+00  
+ scale             1.000e+00     1.000e+00     1.000e+00  
+ ic               -1.235e-29    -1.235e-29    -1.235e-29  
+ m                 1.000e+00     1.000e+00     1.000e+00  
+ w                 0.000e+00     0.000e+00     0.000e+00  
+ l                 0.000e+00     0.000e+00     0.000e+00  
+ temp              2.500e+01     2.500e+01     2.500e+01  
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+  vdd  vdd               0                  1.800e+00  0.000e+00  0.000e+00 dc   
+  vss  vss               0                  0.000e+00  0.000e+00  0.000e+00 dc   
+  vclk  clk               0                  0.000e+00  0.000e+00  0.000e+00 pulse
+             initial value   0.000e+00
+             pulsed value.   1.800e+00
+             delay time...   0.000e+00
+             risetime.....   3.000e-11
+             falltime.....   3.000e-11
+             width........   1.700e-10
+             period.......   4.000e-10
+
+  vin_p  in_p              0                  0.000e+00  0.000e+00  0.000e+00 pulse
+             initial value   0.000e+00
+             pulsed value.   1.800e+00
+             delay time...   0.000e+00
+             risetime.....   5.000e-11
+             falltime.....   5.000e-11
+             width........   3.500e-10
+             period.......   8.000e-10
+
+  vin_n  in_n              0                  1.800e+00  0.000e+00  0.000e+00 pulse
+             initial value   1.800e+00
+             pulsed value.   0.000e+00
+             delay time...   0.000e+00
+             risetime.....   5.000e-11
+             falltime.....   5.000e-11
+             width........   3.500e-10
+             period.......   8.000e-10
+
+  v_bias  v_bias            0                  9.000e-01  0.000e+00  0.000e+00 dc   
+ x_tx_driver.v_bias x_tx_driver.v_bias            0                  7.500e-01  0.000e+00  0.000e+00 dc   
+ x_rx_ctle.v_bias x_rx_ctle.v_bias            0                  8.000e-01  0.000e+00  0.000e+00 dc   
+
+
+ **** mosfets
+
+
+ **** BSIM3v3 Model (Level49 or Level53)
+  
+ 
+                                                               
+ element name        1:m1           1:m2           1:m3        
+ drain               0:tx_out_n     0:tx_out_p     1:node_tail 
+ gate                0:in_p         0:in_n         1:v_bias    
+ source              1:node_tail    1:node_tail    0:vss       
+ bulk                0:vss          0:vss          0:vss       
+ model               0:n_18.1       0:n_18.1       0:n_18.1    
+ w eff             3.998e-05      3.998e-05      1.200e-04     
+ l eff             1.501e-07      1.501e-07      3.237e-07     
+ rd eff            5.200e-02      5.200e-02      1.733e-02     
+ rs eff            5.200e-02      5.200e-02      1.733e-02     
+ cdsat             2.894e-15      2.894e-15      8.608e-15     
+ cssat             2.894e-15      2.894e-15      8.608e-15     
+ capbd             4.692e-14      4.692e-14      1.406e-13     
+ capbs             4.692e-14      4.692e-14      1.406e-13     
+ temp              2.500e+01      2.500e+01      2.500e+01     
+ aic                                                           
+ nf                1.000e+00      1.000e+00      1.000e+00     
+ sa                0.000e+00      0.000e+00      0.000e+00     
+ sb                0.000e+00      0.000e+00      0.000e+00     
+ sd                0.000e+00      0.000e+00      0.000e+00     
+ saeff             0.000e+00      0.000e+00      0.000e+00     
+ sbeff             0.000e+00      0.000e+00      0.000e+00     
+ mulu0             1.000e+00      1.000e+00      1.000e+00     
+ mulua             1.000e+00      1.000e+00      1.000e+00     
+ mulub             1.000e+00      1.000e+00      1.000e+00     
+                                
+ element name        2:m1       
+ drain               0:rx_ctle_ 
+ gate                0:tx_out_p 
+ source              2:node_a   
+ bulk                0:vss      
+ model               0:n_18.1   
+ w eff             2.998e-05    
+ l eff             1.501e-07    
+ rd eff            6.933e-02    
+ rs eff            6.933e-02    
+ cdsat             2.188e-15    
+ cssat             2.188e-15    
+ capbd             3.523e-14    
+ capbs             3.523e-14    
+ temp              2.500e+01    
+ aic                            
+ nf                1.000e+00    
+ sa                0.000e+00    
+ sb                0.000e+00    
+ sd                0.000e+00    
+ saeff             0.000e+00    
+ sbeff             0.000e+00    
+ mulu0             1.000e+00    
+ mulua             1.000e+00    
+ mulub             1.000e+00    
+  
+ 
+                                                              
+ element name        2:m2          2:m3           3:m_tail    
+ drain               0:rx_ctle_    2:node_tail    3:node_tail 
+ gate                0:tx_out_n    2:v_bias       0:clk       
+ source              2:node_b      0:vss          0:vss       
+ bulk                0:vss         0:vss          0:vss       
+ model               0:n_18.1      0:n_18.1       0:n_18.1    
+ w eff             2.998e-05     5.998e-05      1.598e-05     
+ l eff             1.501e-07     3.237e-07      1.499e-07     
+ rd eff            6.933e-02     3.467e-02      1.300e-01     
+ rs eff            6.933e-02     3.467e-02      1.300e-01     
+ cdsat             2.188e-15     4.304e-15      1.201e-15     
+ cssat             2.188e-15     4.304e-15      1.201e-15     
+ capbd             3.523e-14     7.032e-14      1.885e-14     
+ capbs             3.523e-14     7.032e-14      1.885e-14     
+ temp              2.500e+01     2.500e+01      2.500e+01     
+ aic                                                          
+ nf                1.000e+00     1.000e+00      1.000e+00     
+ sa                0.000e+00     0.000e+00      0.000e+00     
+ sb                0.000e+00     0.000e+00      0.000e+00     
+ sd                0.000e+00     0.000e+00      0.000e+00     
+ saeff             0.000e+00     0.000e+00      0.000e+00     
+ sbeff             0.000e+00     0.000e+00      0.000e+00     
+ mulu0             1.000e+00     1.000e+00      1.000e+00     
+ mulua             1.000e+00     1.000e+00      1.000e+00     
+ mulub             1.000e+00     1.000e+00      1.000e+00     
+                                 
+ element name        3:m_in1     
+ drain               3:node_l    
+ gate                0:rx_ctle_  
+ source              3:node_tail 
+ bulk                0:vss       
+ model               0:n_18.1    
+ w eff             9.979e-06     
+ l eff             1.497e-07     
+ rd eff            2.080e-01     
+ rs eff            2.080e-01     
+ cdsat             7.780e-16     
+ cssat             7.780e-16     
+ capbd             1.184e-14     
+ capbs             1.184e-14     
+ temp              2.500e+01     
+ aic                             
+ nf                1.000e+00     
+ sa                0.000e+00     
+ sb                0.000e+00     
+ sd                0.000e+00     
+ saeff             0.000e+00     
+ sbeff             0.000e+00     
+ mulu0             1.000e+00     
+ mulua             1.000e+00     
+ mulub             1.000e+00     
+  
+ 
+                                                                     
+ element name        3:m_in2        3:m_n1      3:m_n2      3:m_p1   
+ drain               3:node_r       0:dout_n    0:dout_p    0:dout_n 
+ gate                0:rx_ctle_     0:dout_p    0:dout_n    0:dout_p 
+ source              3:node_tail    3:node_l    3:node_r    0:vdd    
+ bulk                0:vss          0:vss       0:vss       0:vdd    
+ model               0:n_18.1       0:n_18.1    0:n_18.1    0:p_18.1 
+ w eff             9.979e-06      7.979e-06   7.979e-06   1.230e-05  
+ l eff             1.497e-07      1.495e-07   1.495e-07   1.243e-07  
+ rd eff            2.080e-01      2.600e-01   2.600e-01   1.733e-01  
+ rs eff            2.080e-01      2.600e-01   2.600e-01   1.733e-01  
+ cdsat             7.780e-16      6.370e-16   6.370e-16   5.690e-16  
+ cssat             7.780e-16      6.370e-16   6.370e-16   5.690e-16  
+ capbd             1.184e-14      9.496e-15   9.496e-15   1.209e-14  
+ capbs             1.184e-14      9.496e-15   9.496e-15   1.209e-14  
+ temp              2.500e+01      2.500e+01   2.500e+01   2.500e+01  
+ aic                                                                 
+ nf                1.000e+00      1.000e+00   1.000e+00   1.000e+00  
+ sa                0.000e+00      0.000e+00   0.000e+00   0.000e+00  
+ sb                0.000e+00      0.000e+00   0.000e+00   0.000e+00  
+ sd                0.000e+00      0.000e+00   0.000e+00   0.000e+00  
+ saeff             0.000e+00      0.000e+00   0.000e+00   0.000e+00  
+ sbeff             0.000e+00      0.000e+00   0.000e+00   0.000e+00  
+ mulu0             1.000e+00      1.000e+00   1.000e+00   1.000e+00  
+ mulua             1.000e+00      1.000e+00   1.000e+00   1.000e+00  
+ mulub             1.000e+00      1.000e+00   1.000e+00   1.000e+00  
+  
+ 
+                                                                  
+ element name        3:m_p2      3:m_rst1    3:m_rst2    3:m_rst3 
+ drain               0:dout_p    0:dout_n    0:dout_p    3:node_l 
+ gate                0:dout_n    0:clk       0:clk       0:clk    
+ source              0:vdd       0:vdd       0:vdd       0:vdd    
+ bulk                0:vdd       0:vdd       0:vdd       0:vdd    
+ model               0:p_18.1    0:p_18.1    0:p_18.1    0:p_18.1 
+ w eff             1.230e-05   6.301e-06   6.301e-06   6.301e-06  
+ l eff             1.243e-07   1.244e-07   1.244e-07   1.244e-07  
+ rd eff            1.733e-01   3.467e-01   3.467e-01   3.467e-01  
+ rs eff            1.733e-01   3.467e-01   3.467e-01   3.467e-01  
+ cdsat             5.690e-16   3.064e-16   3.064e-16   3.064e-16  
+ cssat             5.690e-16   3.064e-16   3.064e-16   3.064e-16  
+ capbd             1.209e-14   6.138e-15   6.138e-15   6.138e-15  
+ capbs             1.209e-14   6.138e-15   6.138e-15   6.138e-15  
+ temp              2.500e+01   2.500e+01   2.500e+01   2.500e+01  
+ aic                                                              
+ nf                1.000e+00   1.000e+00   1.000e+00   1.000e+00  
+ sa                0.000e+00   0.000e+00   0.000e+00   0.000e+00  
+ sb                0.000e+00   0.000e+00   0.000e+00   0.000e+00  
+ sd                0.000e+00   0.000e+00   0.000e+00   0.000e+00  
+ saeff             0.000e+00   0.000e+00   0.000e+00   0.000e+00  
+ sbeff             0.000e+00   0.000e+00   0.000e+00   0.000e+00  
+ mulu0             1.000e+00   1.000e+00   1.000e+00   1.000e+00  
+ mulua             1.000e+00   1.000e+00   1.000e+00   1.000e+00  
+ mulub             1.000e+00   1.000e+00   1.000e+00   1.000e+00  
+  
+ 
+                              
+ element name        3:m_rst4 
+ drain               3:node_r 
+ gate                0:clk    
+ source              0:vdd    
+ bulk                0:vdd    
+ model               0:p_18.1 
+ w eff             6.301e-06  
+ l eff             1.244e-07  
+ rd eff            3.467e-01  
+ rs eff            3.467e-01  
+ cdsat             3.064e-16  
+ cssat             3.064e-16  
+ capbd             6.138e-15  
+ capbs             6.138e-15  
+ temp              2.500e+01  
+ aic                          
+ nf                1.000e+00  
+ sa                0.000e+00  
+ sb                0.000e+00  
+ sd                0.000e+00  
+ saeff             0.000e+00  
+ sbeff             0.000e+00  
+ mulu0             1.000e+00  
+ mulua             1.000e+00  
+ mulub             1.000e+00  
+  
+
+
+ **** subcircuit calls
+    name        subcircuit         external nodes
+
+
+         0:x_tx_dri cml_driv        0:in_p        0:in_n        0:tx_out_p
+                               0:tx_out_n    0:vdd         0:vss     
+
+
+         0:x_rx_ctl ctle_blo        0:tx_out_p    0:tx_out_n    0:rx_ctle_
+                               0:rx_ctle_    0:vdd         0:vss     
+
+
+         0:x_rx_sam sampler_        0:rx_ctle_    0:rx_ctle_    0:dout_p  
+                               0:dout_n      0:clk         0:vdd     
+                               0:vss     
+
+
+ 
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  element node table
+                                                                                      
+ 0                c_esd_p          c_esd_n          vdd              vss              
+                  vclk             vin_p            vin_n            v_bias           
+                  1:v_bias         2:v_bias                                           
+ clk              vclk             3:m_tail:g       3:m_rst1:g       3:m_rst2:g       
+                  3:m_rst3:g       3:m_rst4:g                                         
+ dout_n           3:m_n1:d         3:m_n2:g         3:m_p1:d         3:m_p2:g         
+                  3:m_rst1:d                                                          
+ dout_p           3:m_n1:g         3:m_n2:d         3:m_p1:g         3:m_p2:d         
+                  3:m_rst2:d                                                          
+ in_n             vin_n            1:m2:g                                             
+ in_p             vin_p            1:m1:g                                             
+ rx_ctle_n        2:rl2            2:m1:d           3:m_in2:g                         
+ rx_ctle_p        2:rl1            2:m2:d           3:m_in1:g                         
+ tx_out_n         r_term_n         1:r2             c_esd_n          1:m1:d           
+                  2:m2:g                                                              
+ tx_out_p         r_term_p         1:r1             c_esd_p          1:m2:d           
+                  2:m1:g                                                              
+ v_bias           r_term_p         r_term_n         v_bias                            
+ vdd              1:r1             1:r2             2:rl1            2:rl2            
+                  vdd              3:m_p1:s         3:m_p1:b         3:m_p2:s         
+                  3:m_p2:b         3:m_rst1:s       3:m_rst1:b       3:m_rst2:s       
+                  3:m_rst2:b       3:m_rst3:s       3:m_rst3:b       3:m_rst4:s       
+                  3:m_rst4:b                                                          
+ vss              vss              1:m1:b           1:m2:b           1:m3:s           
+                  1:m3:b           2:m1:b           2:m2:b           2:m3:s           
+                  2:m3:b           3:m_tail:s       3:m_tail:b       3:m_in1:b        
+                  3:m_in2:b        3:m_n1:b         3:m_n2:b                          
+ 1:node_tail      1:m1:s           1:m2:s           1:m3:d                            
+ 1:v_bias         1:v_bias         1:m3:g                                             
+ 2:node_a         2:rs1            2:cs             2:m1:s                            
+ 2:node_b         2:rs2            2:cs             2:m2:s                            
+ 2:node_tail      2:rs1            2:rs2            2:m3:d                            
+ 2:v_bias         2:v_bias         2:m3:g                                             
+ 3:node_l         3:m_in1:d        3:m_n1:s         3:m_rst3:d                        
+ 3:node_r         3:m_in2:d        3:m_n2:s         3:m_rst4:d                        
+ 3:node_tail      3:m_tail:d       3:m_in1:s        3:m_in2:s                         
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+  Opening plot unit= 79
+ file=c:\users\junio\vscode\pcie_serdes\serdes_top_018.pa0                     
+
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is voltage   simulation time is   0.000e+00
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:clk     = 0.000e+00 0:dout_n  = 1.800e+00 0:dout_p  = 1.800e+00
+ +0:in_n    = 1.800e+00 0:in_p    = 0.000e+00 0:rx_ctle_= 1.088e+00
+ +0:rx_ctle_= 8.115e-01 0:tx_out_n= 1.350e+00 0:tx_out_p= 1.241e+00
+ +0:v_bias  = 9.000e-01 0:vdd     = 1.800e+00 0:vss     = 0.000e+00
+ +1:node_tai= 8.160e-01 1:v_bias  = 7.500e-01 2:node_a  = 5.028e-01
+ +2:node_b  = 5.348e-01 2:node_tai= 4.208e-01 2:v_bias  = 8.000e-01
+ +3:node_l  = 1.800e+00 3:node_r  = 1.800e+00 3:node_tai= 9.479e-01
+
+ ******  
+ * =======================================================================
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+   v_ctle_max=  3.1340E-01    at=  9.1020E-09
+               from=  1.0000E-09    to=  1.0000E-08
+   i_total_avg= -2.3559E-02  from=  1.0000E-09     to=  1.0000E-08
+   p_total_avg=  4.2406E-02
+  **warning** PSF format is not supported on this platform.
+
+          ***** job concluded
+1****** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******                   
+ ******  
+ * =======================================================================
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count                  :     1
+  Available CPU Count                         :    16
+  Actual Model Evaluation(Load) Threads Count :     1
+  Actual Solver Threads Count                 :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      56 # elements   =      36
+  # resistors   =       8 # capacitors =       3 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       8
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      17 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          23
+  transient          0.11      100001        3222        1163 rev=       106
+  readin             0.08
+  errchk             0.01
+  setup              0.02
+  output             0.00
+
+
+           total memory used          372  kbytes
+           total cpu time            0.25 seconds
+           total elapsed time        0.32 seconds
+           job started at     13:56:03 08/04/2026
+           job ended   at     13:56:03 08/04/2026
+
+
+  lic: Release hspice token(s) 

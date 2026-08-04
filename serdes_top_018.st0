@@ -1,5 +1,5 @@
 ***** HSPICE -- E-2010.12 32-BIT (Nov 20 2010) winnt ******
- Input File: c:\users\junio\vscode\pcie_serdes\ctle_018.sp
+ Input File: c:\users\junio\vscode\pcie_serdes\serdes_top_018.sp
  lic:
  lic: FLEXlm: v10.8
  lic: USER:   junio                HOSTNAME: LAPTOP-3R2P9I5V
@@ -33,28 +33,27 @@
        option ingold   =     2.00
        option list
        option node
- init: end read circuit files,  cpu clock=  1.47E-01 memory=    151 kb
- init: begin check errors,  cpu clock=  1.47E-01
- init: end check errors,  cpu clock=  1.64E-01 memory=    180 kb
- init: begin setup matrix, pivot=     0 cpu clock=  1.64E-01
-       establish matrix -- done,  cpu clock=  1.79E-01 memory=    185 kb
-       re-order matrix -- done,  cpu clock=  1.79E-01 memory=    187 kb
- init: end setup matrix,  cpu clock=  1.79E-01 memory=    200 kb
+ init: end read circuit files,  cpu clock=  1.50E-01 memory=    153 kb
+ init: begin check errors,  cpu clock=  1.50E-01
+ init: end check errors,  cpu clock=  1.63E-01 memory=    314 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.63E-01
+       establish matrix -- done,  cpu clock=  1.71E-01 memory=    333 kb
+       re-order matrix -- done,  cpu clock=  1.78E-01 memory=    341 kb
+ init: end setup matrix,  cpu clock=  1.79E-01 memory=    369 kb
  dcop: begin dcop,  cpu clock=  1.79E-01
- dcop: end dcop,  cpu clock=  1.98E-01 memory=    200 kb  tot_iter=       6
- output: c:\users\junio\vscode\pcie_serdes\ctle_018.ma0
- sweep: ac ac0    begin, #sweeps=  91 cpu clock=  1.98E-01
- ac: frequency=    1.12E+06
- ac: frequency=    2.82E+06
- ac: frequency=    7.94E+06
- ac: frequency=    2.24E+07
- ac: frequency=    6.31E+07
- ac: frequency=    1.78E+08
- ac: frequency=    5.01E+08
- ac: frequency=    1.41E+09
- ac: frequency=    3.98E+09
- ac: frequency=    1.12E+10
- ac: frequency=    3.16E+10
- sweep: ac ac0    end,  cpu clock=  2.43E-01 memory=    203 kb
+ dcop: end dcop,  cpu clock=  1.87E-01 memory=    369 kb  tot_iter=      23
+ output: c:\users\junio\vscode\pcie_serdes\serdes_top_018.mt0
+ sweep: tran tran0    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.95E-01
+ tran: time= 1.0000E-09 tot_iter=     318 conv_iter=     115 cpu clock= 2.12E-01
+ tran: time= 2.0000E-09 tot_iter=     632 conv_iter=     229 cpu clock= 2.22E-01
+ tran: time= 3.0000E-09 tot_iter=     965 conv_iter=     348 cpu clock= 2.29E-01
+ tran: time= 4.0081E-09 tot_iter=    1282 conv_iter=     463 cpu clock= 2.45E-01
+ tran: time= 5.0000E-09 tot_iter=    1615 conv_iter=     582 cpu clock= 2.53E-01
+ tran: time= 6.0000E-09 tot_iter=    1923 conv_iter=     695 cpu clock= 2.61E-01
+ tran: time= 7.0000E-09 tot_iter=    2258 conv_iter=     815 cpu clock= 2.73E-01
+ tran: time= 8.0109E-09 tot_iter=    2574 conv_iter=     930 cpu clock= 2.86E-01
+ tran: time= 9.0000E-09 tot_iter=    2905 conv_iter=    1048 cpu clock= 2.94E-01
+ tran: time= 1.0000E-08 tot_iter=    3220 conv_iter=    1162 cpu clock= 3.08E-01
+ sweep: tran tran0    end,  cpu clock=  3.13E-01 memory=    372 kb
 >info:         ***** hspice job concluded
  lic: Release hspice token(s)
