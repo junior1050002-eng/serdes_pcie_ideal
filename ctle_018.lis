@@ -10,7 +10,7 @@
   lic:  
   lic: FLEXlm: v10.8 
   lic: USER:   junio                HOSTNAME: LAPTOP-3R2P9I5V 
-  lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00ffdda35f06 ec3a56096030 ee3a56096030
+  lic: HOSTID: "ec3a56096031 b4e25b77dbaf 00e04c6803f1 00ffdda35f06 ec3a56096030
   
   lic: Using FLEXlm license file: 
   lic: 27000@localhost 
@@ -269,12 +269,12 @@
  node1               0:node_a      0:node_b      0:vdd      0:vdd   
  node2               0:node_tai    0:node_tai    0:out_p    0:out_n 
  model                                                              
- res eff           7.500e+01     7.500e+01     6.500e+02  6.500e+02 
+ res eff           7.500e+01     7.500e+01     2.000e+03  2.000e+03 
  tc1                 0.            0.            0.         0.      
  tc2                 0.            0.            0.         0.      
  scale             1.000e+00     1.000e+00     1.000e+00  1.000e+00 
  m                 1.000e+00     1.000e+00     1.000e+00  1.000e+00 
- ac                7.500e+01     7.500e+01     6.500e+02  6.500e+02 
+ ac                7.500e+01     7.500e+01     2.000e+03  2.000e+03 
  temp              2.500e+01     2.500e+01     2.500e+01  2.500e+01 
  l                   0.            0.            0.         0.      
  w                   0.            0.            0.         0.      
@@ -378,8 +378,8 @@
     node    =voltage      node    =voltage      node    =voltage
 
  +0:in_cm   = 9.000e-01 0:in_n    = 9.000e-01 0:in_p    = 9.000e-01
- +0:node_a  = 2.292e-01 0:node_b  = 2.292e-01 0:node_tai= 1.592e-01
- +0:out_n   = 1.193e+00 0:out_p   = 1.193e+00 0:v_bias  = 8.000e-01
+ +0:node_a  = 1.738e-01 0:node_b  = 1.738e-01 0:node_tai= 1.168e-01
+ +0:out_n   = 2.815e-01 0:out_p   = 2.815e-01 0:v_bias  = 8.000e-01
  +0:vdd     = 1.800e+00 0:vss     = 0.000e+00
 
 
@@ -388,10 +388,10 @@
  subckt                                                                    
  element  0:vdd      0:vss      0:vcm      0:vin_p    0:vin_n    0:vbias   
   volts    1.800e+00  0.000e+00  9.000e-01  0.000e+00  0.000e+00  8.000e-01
-  current -1.867e-03  1.867e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00
-  power    3.361e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+  current -1.519e-03  1.519e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00
+  power    2.733e-03  0.000e+00  0.000e+00  0.000e+00  0.000e+00  0.000e+00
 
-     total voltage source power dissipation=  3.361e-03       watts
+     total voltage source power dissipation=  2.733e-03       watts
 
 
 
@@ -399,10 +399,10 @@
 
  subckt                                              
  element  0:rs1      0:rs2      0:rl1      0:rl2     
-  r value  7.500e+01  7.500e+01  6.500e+02  6.500e+02
-  v drop   7.002e-02  7.002e-02  6.069e-01  6.069e-01
-  current  9.336e-04  9.336e-04  9.336e-04  9.336e-04
-  power    6.537e-05  6.537e-05  5.666e-04  5.666e-04
+  r value  7.500e+01  7.500e+01  2.000e+03  2.000e+03
+  v drop   5.695e-02  5.695e-02  1.518e+00  1.518e+00
+  current  7.593e-04  7.593e-04  7.593e-04  7.593e-04
+  power    4.324e-05  4.324e-05  1.153e-03  1.153e-03
 
 
 
@@ -412,27 +412,27 @@
  subckt                                   
  element  0:m1       0:m2       0:m3      
  model    0:n_18.1   0:n_18.1   0:n_18.1  
- region     Saturati   Saturati     Linear
-  id       9.336e-04  9.336e-04  1.867e-03
-  ibs     -5.017e-16 -5.017e-16 -2.786e-19
-  ibd     -2.611e-15 -2.611e-15 -6.848e-16
-  vgs      6.708e-01  6.708e-01  8.000e-01
-  vds      9.640e-01  9.640e-01  1.592e-01
-  vbs     -2.292e-01 -2.292e-01  0.000e+00
-  vth      5.205e-01  5.205e-01  4.778e-01
-  vdsat    1.675e-01  1.675e-01  2.762e-01
-  vod      1.503e-01  1.503e-01  3.222e-01
-  beta     5.979e-02  5.979e-02  5.506e-02
-  gam eff  5.135e-01  5.135e-01  5.074e-01
-  gm       8.514e-03  8.514e-03  7.334e-03
-  gds      3.469e-04  3.469e-04  7.133e-03
-  gmb      1.072e-03  1.072e-03  1.346e-03
-  cdtot    3.690e-14  3.690e-14  1.545e-13
-  cgtot    5.559e-14  5.559e-14  1.846e-13
-  cstot    7.570e-14  7.570e-14  2.215e-13
-  cbtot    6.536e-14  6.536e-14  1.694e-13
-  cgs      4.040e-14  4.040e-14  1.265e-13
-  cgd      1.079e-14  1.079e-14  4.844e-14
+ region       Linear     Linear     Linear
+  id       7.593e-04  7.593e-04  1.519e-03
+  ibs     -3.804e-16 -3.804e-16 -2.266e-19
+  ibd     -6.158e-16 -6.158e-16 -5.027e-16
+  vgs      7.262e-01  7.262e-01  8.000e-01
+  vds      1.077e-01  1.077e-01  1.168e-01
+  vbs     -1.738e-01 -1.738e-01  0.000e+00
+  vth      5.431e-01  5.431e-01  4.785e-01
+  vdsat    1.849e-01  1.849e-01  2.757e-01
+  vod      1.831e-01  1.831e-01  3.215e-01
+  beta     5.951e-02  5.951e-02  5.506e-02
+  gam eff  5.121e-01  5.121e-01  5.074e-01
+  gm       4.790e-03  4.790e-03  5.590e-03
+  gds      4.406e-03  4.406e-03  9.401e-03
+  gmb      6.490e-04  6.490e-04  1.037e-03
+  cdtot    5.673e-14  5.673e-14  1.884e-13
+  cgtot    6.007e-14  6.007e-14  1.908e-13
+  cstot    7.745e-14  7.745e-14  2.264e-13
+  cbtot    7.278e-14  7.278e-14  1.714e-13
+  cgs      3.965e-14  3.965e-14  1.203e-13
+  cgd      1.671e-14  1.671e-14  6.187e-14
 
 
 
@@ -475,19 +475,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.02           1           6
+  op point           0.01           1           9
   ac analysis        0.04          91          91
-  readin             0.08
-  errchk             0.02
+  readin             0.06
+  errchk             0.01
   setup              0.01
   output             0.00
 
 
            total memory used          200  kbytes
-           total cpu time            0.18 seconds
-           total elapsed time        0.25 seconds
-           job started at     11:30:49 08/04/2026
-           job ended   at     11:30:49 08/04/2026
+           total cpu time            0.13 seconds
+           total elapsed time        0.18 seconds
+           job started at     22:22:51 08/04/2026
+           job ended   at     22:22:52 08/04/2026
 
 
   lic: Release hspice token(s) 

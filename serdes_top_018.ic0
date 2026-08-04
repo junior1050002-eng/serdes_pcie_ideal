@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "E-2010.12 32-BIT"
 * "format" "HSP"
-* "rundate" "13:56:03 08/04/2026 "
+* "rundate" "23:19:40 08/04/2026 "
 * "netlist" "c:\users\junio\vscode\pcie_serdes\serdes_top_018.sp "
 * "runtitle" "* ===================================================================="
 * time =  0.000e+00       
@@ -13,22 +13,22 @@
 + clk = 0.000e+00       
 + dout_n = 1.800e+00       
 + dout_p = 1.800e+00       
-+ in_n = 1.800e+00       
-+ in_p = 0.000e+00       
-+ rx_ctle_n = 1.088e+00       
-+ rx_ctle_p = 8.115e-01       
-+ tx_out_n = 1.350e+00       
-+ tx_out_p = 1.241e+00       
-+ v_bias = 9.000e-01       
++ in_n = 9.000e-01       
++ in_p = 9.000e-01       
++ rx_ctle_n = 7.552e-01       
++ rx_ctle_p = 7.552e-01       
++ tx_out_n = 1.013e+00       
++ tx_out_p = 1.013e+00       
++ v_cm = 9.000e-01       
 + vdd = 1.800e+00       
 + vss = 0.000e+00       
-+ x_tx_driver.node_tail = 8.160e-01       
++ x_tx_driver.node_tail = 1.938e-01       
 + x_tx_driver.v_bias = 7.500e-01       
-+ x_rx_ctle.node_a = 5.028e-01       
-+ x_rx_ctle.node_b = 5.348e-01       
-+ x_rx_ctle.node_tail = 4.208e-01       
++ x_rx_ctle.node_a = 2.471e-01       
++ x_rx_ctle.node_b = 2.471e-01       
++ x_rx_ctle.node_tail = 1.266e-01       
 + x_rx_ctle.v_bias = 8.000e-01       
 + x_rx_sampler.node_l = 1.800e+00       
 + x_rx_sampler.node_r = 1.800e+00       
-+ x_rx_sampler.node_tail = 9.479e-01       
++ x_rx_sampler.node_tail = 6.814e-01       
 ***   END: Saved Operating Point ***                     

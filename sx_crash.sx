@@ -1,0 +1,12 @@
+### Custom WaveView session file (version C-2009.09 build 0909) ###
+### saved at 22:24:22 on Tue Aug 04 2026 ###
+wdf 0 "C:\Users\junio\vscode\pcie_serdes\serdes_top_018.tr0" load=open 
+scalar list
+waveview_begin 1  horiz  mntr_b=66 style=1 geo=816:90:700:400 "name=waveview 1" 
+waveview_end
+waveview_begin 2  horiz  mntr_b=66 style=1 geo=796:110:700:400 "name=waveview 2" 
+  panel_begin polar pidx=0 ridx=0 cidx=0 topname=0 npos=66 spath=true 
+  panel_end
+  panel_begin eyediag pidx=1 ridx=0 cidx=1 topname=0 npos=66 spath=true eye_plot=fold eye_mask=off eye_shift=0.0000e+000  eye_auto=true 
+  panel_end
+waveview_end

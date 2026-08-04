@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "E-2010.12 32-BIT"
 * "format" "HSP"
-* "rundate" "11:30:49 08/04/2026 "
+* "rundate" "22:22:51 08/04/2026 "
 * "netlist" "c:\users\junio\vscode\pcie_serdes\ctle_018.sp "
 * "runtitle" "* ===================================================================="
 * time =  0.000e+00       
@@ -13,11 +13,11 @@
 + in_cm = 9.000e-01       
 + in_n = 9.000e-01       
 + in_p = 9.000e-01       
-+ node_a = 2.292e-01       
-+ node_b = 2.292e-01       
-+ node_tail = 1.592e-01       
-+ out_n = 1.193e+00       
-+ out_p = 1.193e+00       
++ node_a = 1.738e-01       
++ node_b = 1.738e-01       
++ node_tail = 1.168e-01       
++ out_n = 2.815e-01       
++ out_p = 2.815e-01       
 + v_bias = 8.000e-01       
 + vdd = 1.800e+00       
 + vss = 0.000e+00       

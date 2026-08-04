@@ -23,10 +23,10 @@ VBIAS V_BIAS 0 DC 0.75V
 * 增加 M1, M2 與 M3 尺寸，提高驅動電流，大幅拉開 Eye Height (Vod_p2p > 600mV)
 M1 OUT_N IN_P NODE_TAIL VSS N_18 W=40u L=0.18u
 M2 OUT_P IN_N NODE_TAIL VSS N_18 W=40u L=0.18u
-M3 NODE_TAIL V_BIAS VSS VSS N_18 W=120u L=0.36u
+M3 node_tail v_bias vss vss n_18 W=120u L=0.36u M=4
 
-R1 VDD OUT_P 50.0
-R2 VDD OUT_N 50.0
+R1 vdd vout_p 200
+R2 vdd vout_n 200
 
 * Pad & Package Parasitic Load (C_pad = 100fF)
 CPAD1 OUT_P 0 100fF

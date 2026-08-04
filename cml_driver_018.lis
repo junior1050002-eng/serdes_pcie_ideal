@@ -269,7 +269,7 @@
 
 
   ******  Circuit Statistics  ******
-  # nodes       =      14 # elements   =      13
+  # nodes       =      16 # elements   =      13
   # resistors   =       2 # capacitors =       2 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
   # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
@@ -294,8 +294,8 @@
            total memory used          178  kbytes
            total cpu time            0.07 seconds
            total elapsed time        0.12 seconds
-           job started at     23:13:55 08/03/2026
-           job ended   at     23:13:55 08/03/2026
+           job started at     22:21:37 08/04/2026
+           job ended   at     22:21:37 08/04/2026
 
 
   lic: Release hspice token(s) 
